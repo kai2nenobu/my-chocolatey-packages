@@ -14,7 +14,10 @@ choco uninstall %PACKAGE_NAME%
 
 REM Verify cpdf is removed successfully
 where %COMMAND_NAME%
-if not "%ERRORLEVEL%"=="1" (
+if "%ERRORLEVEL%"=="1" (
+    echo Package is successfully removed
+    exit /b 0
+) else (
     echo Try to uninstall a package but %COMMAND_NAME% command is remaining in PATH
     exit /b 1
 )
