@@ -22,5 +22,10 @@ Install-ChocolateyZipPackage `
   -Checksum64 $checksum64 `
   -UnzipLocation $unzipLocation
 
-## Rename unzipped directory into "bin"
-# Rename-Item -path "$(Join-Path $location $subDirectory)" -newName bin
+# Prevent from generating shim for a5m2.exe
+New-Item (Join-Path $unzipLocation 'a5m2.exe.ignore') -type file -force | Out-Null
+
+## Create a shortcut to a5m2.exe in Start Menu
+Install-ChocolateyShortcut `
+  -ShortcutFilePath (Join-Path $([Environment]::GetFolderPath('CommonStartMenu')) 'Programs\A5-SQL Mk-2 (a5m2).lnk') `
+  -TargetPath (Join-Path $unzipLocation 'a5m2.exe')
