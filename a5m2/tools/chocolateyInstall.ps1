@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = $env:ChocolateyPackageName
-$location    = Join-Path $env:ChocolateyPackageFolder 'a5m2'
+$unzipLocation = Join-Path $env:ChocolateyPackageFolder 'a5m2'
 $url         = 'http://a5m2.mmatsubara.com/download/a5m2_2.12.2_x86.zip'
 $checksum    = '5b57d689b09c862e45c0a5ccd566074e'
 $url64       = 'http://a5m2.mmatsubara.com/download/a5m2_2.12.2_x64.zip'
@@ -20,7 +20,7 @@ Install-ChocolateyZipPackage `
   -Checksum $checksum `
   -Url64bit $url64 `
   -Checksum64 $checksum64 `
-  -UnzipLocation $location
+  -UnzipLocation $unzipLocation
 
 ## Rename unzipped directory into "bin"
 # Rename-Item -path "$(Join-Path $location $subDirectory)" -newName bin
