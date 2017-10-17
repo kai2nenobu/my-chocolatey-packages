@@ -4,16 +4,16 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>cpdf-cr</id>
     <version>2.2.1</version>
-    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/cpdf-cr</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
+    <owners>kai2nenobu</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>Coherent PDF Command Line Tools (Community Release)</title>
     <authors>Coherent Graphics Ltd.</authors>
-    <projectUrl>https://github.com/koron/cmigemo</projectUrl>
+    <projectUrl>http://community.coherentpdf.com/</projectUrl>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/cmigemo.png</iconUrl>-->
     <copyright>Coherent Graphics Ltd.</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
