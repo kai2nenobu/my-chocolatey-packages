@@ -1,4 +1,5 @@
 @echo off
 
-echo Start Build
-chocolatey --help
+choco source
+cd cpdf-cr
+choco pack
