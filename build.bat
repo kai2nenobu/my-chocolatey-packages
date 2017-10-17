@@ -1,5 +1,5 @@
 @echo off
 
 choco source
-cd cpdf-cr
+cd %SourcesPath%\cpdf-cr
 choco pack
