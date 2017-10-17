@@ -11,6 +11,6 @@ choco uninstall cpdf-cr
 REM Verify cpdf is removed successfully
 where cpdf
 if not "%ERRORLEVEL%"=="1" (
-    echo Fail to uninstall a package
+    echo Try to uninstall a package but cpdf command is remaining in PATH
     exit /b 1
 )
