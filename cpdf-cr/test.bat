@@ -10,7 +10,7 @@ choco uninstall cpdf-cr
 
 REM Verify cpdf is removed successfully
 where cpdf
-if not "%ERRORLEVE%"=="1" (
+if not "%ERRORLEVEL%"=="1" (
     echo Fail to uninstall a package
     exit /b 1
 )
