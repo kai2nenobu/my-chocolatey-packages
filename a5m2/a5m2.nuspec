@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>a5m2</id>
+    <version>2.12.2</version>
+    <title>A5:SQL Mk-2</title>
+    <authors>Masakazu Matsubara</authors>
+    <owners>Masakazu Matsubara</owners>
+    <licenseUrl>http://a5m2.mmatsubara.com/document/license.txt</licenseUrl>
+    <projectUrl>http://a5m2.mmatsubara.com/</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A5:SQL Mk-2 is a free SQL development tool developed to support database development.
+It is developed with the goal of being highly functional and lightweight and easy to understand its usage.
+In addition to executing SQL and editing tables, you can get SQL execution plans and create ER diagrams.</description>
+    <summary>SQL Development Environment &amp; ER Diagram Tool</summary>
+    <copyright>Masakazu Matsubara</copyright>
+    <tags>database sql</tags>
+  </metadata>
+</package>
