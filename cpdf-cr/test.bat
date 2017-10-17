@@ -1,10 +1,8 @@
-@echo off
-
 REM Install a package in local
-choco install -dv -y -s . cpdf-cr
+choco install -y -s . cpdf-cr
 
 REM Verify cpdf command is in PATH
-cpdf --help
+cpdf -version
 if errorlevel 1 exit /b %ERRORLEVEL%
 
 REM Uninstall a package
