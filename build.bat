@@ -1,4 +1,3 @@
-choco source
 
 REM Build package
 cd %SourcesPath%\cpdf-cr
