@@ -18,7 +18,7 @@ test_script:
   - '%APPVEYOR_BUILD_FOLDER%\a5m2\test.bat'
   - '%APPVEYOR_BUILD_FOLDER%\cpdf-cr\test.bat'
 deploy_script:
-  - choco push --source %MYGET_FEED% --api-key %MYGET_API_KEY%
+  - choco push --source %MYGET_FEED% --api-key %MYGET_API_KEY% *.nupkg
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
