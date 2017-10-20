@@ -10,6 +10,7 @@ init:
   - choco --version
   - choco source
   - choco list -lo
+  - dir C:\mingw-w64\
   - dir %MINGW_32BIT%
   - dir %MINGW_64BIT%
 build_script:
