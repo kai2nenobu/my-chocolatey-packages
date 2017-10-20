@@ -3,7 +3,7 @@ version: 0.0.1.{build}
 environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
   MYGET_API_KEY:
-    secure: yYHBdK/0WBIzCZ89/ux8dw==
+    secure: 'yYHBdK/0WBIzCZ89/ux8dw=='
   MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32'
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
 install:
