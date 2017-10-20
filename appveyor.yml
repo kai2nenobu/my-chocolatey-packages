@@ -3,6 +3,8 @@ version: 0.0.1.{build}
 environment:
   MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32'
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
+  MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
+  MYGET_API_KEY: 'dummy'
 install:
   - dir
 build_script:
@@ -15,6 +17,8 @@ build_script:
 test_script:
   - '%APPVEYOR_BUILD_FOLDER%\a5m2\test.bat'
   - '%APPVEYOR_BUILD_FOLDER%\cpdf-cr\test.bat'
+deploy_script:
+  - choco push --source %MYGET_FEED% --api-key %MYGET_API_KEY%
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
