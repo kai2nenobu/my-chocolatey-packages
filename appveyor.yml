@@ -11,9 +11,12 @@ build_script:
   # cpdf-cr
   - choco pack %APPVEYOR_BUILD_FOLDER%\cpdf-cr\cpdf-cr.nuspec
   # check build artifacts
-  - dir a5m2 cpdf-cr
+  - dir
 test_script:
   - '%APPVEYOR_BUILD_FOLDER%\a5m2\test.bat'
   - '%APPVEYOR_BUILD_FOLDER%\cpdf-cr\test.bat'
+artifacts:
+  # pushing all *.nupkg files in build directory recursively
+  - path: '**\*.nupkg'
 build:
   verbosity: detailed
