@@ -2,11 +2,16 @@ version: 0.0.1.{build}
 init:
 - cmd: >-
     echo %CD%
+
     choco --version
+
     choco source
+
     choco list -lo
 
+
     where gcc
+
     dir C:\
 build:
-  verbosity: minimal
+  verbosity: detailed
