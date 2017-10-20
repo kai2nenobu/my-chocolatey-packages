@@ -10,7 +10,9 @@ init:
   - choco --version
   - choco source
   - choco list -lo
-  - dir %MINGW_32BIT%\bin
-  - dir %MINGW_64BIT%\bin
+  - dir %MINGW_32BIT%
+  - dir %MINGW_64BIT%
+build_script:
+  - echo "NOT IMPLEMENTED"
 build:
   verbosity: detailed
