@@ -2,7 +2,7 @@ image: Visual Studio 2015
 version: 0.0.1.{build}
 environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
-  my_variable:
+  MYGET_API_KEY:
     secure: yYHBdK/0WBIzCZ89/ux8dw==
   MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32'
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
@@ -11,7 +11,8 @@ install:
   - set
   - ps: 'Get-ChildItem env:'
   - echo "%MYGET_FEED%"
-  - echo "%my_variable%"
+  - echo "%MYGET_API_KEY%"
+  - echo "%HOGE%"
 build_script:
   # a5m2
   - choco pack %APPVEYOR_BUILD_FOLDER%\a5m2\a5m2.nuspec
@@ -24,7 +25,7 @@ test_script:
   - '%APPVEYOR_BUILD_FOLDER%\cpdf-cr\test.bat'
 deploy_script:
   - dir
-  - choco push a5m2.2.12.2.nupkg --source "'%MYGET_FEED%'" -k="'%my_variable%'"
+  - choco push a5m2.2.12.2.nupkg --source "%MYGET_FEED%" -k="%MYGET_API_KEY%"
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
