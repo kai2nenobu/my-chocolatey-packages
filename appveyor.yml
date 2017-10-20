@@ -8,6 +8,8 @@ environment:
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
 install:
   - dir
+  - echo "$(MYGET_FEED)"
+  - echo "$(MYGET_API_KEY)"
 build_script:
   # a5m2
   - choco pack %APPVEYOR_BUILD_FOLDER%\a5m2\a5m2.nuspec
