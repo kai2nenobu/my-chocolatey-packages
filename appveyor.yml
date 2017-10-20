@@ -1,7 +1,7 @@
 image: Visual Studio 2015
 version: 0.0.1.{build}
 environment:
-  - PATH: '%PATH%;C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1'
+  PATH: '%PATH%;C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1'
 init:
 - cmd: >-
     echo %PATH%
