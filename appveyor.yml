@@ -8,10 +8,10 @@ install:
 build_script:
   # a5m2
   - cd %APPVEYOR_BUILD_FOLDER%\a5m2
-  - cpack
+  - choco pack
   # cpdf-cr
   - cd %APPVEYOR_BUILD_FOLDER%\cpdf-cr
-  - cpack
+  - choco pack
   - test.bat
   # check build artifacts
   - cd %APPVEYOR_BUILD_FOLDER%
