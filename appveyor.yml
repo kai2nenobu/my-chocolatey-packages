@@ -12,6 +12,5 @@ init:
   - choco list -lo
   - dir %MINGW_32BIT%\bin
   - dir %MINGW_64BIT%\bin
-  - where gcc make
 build:
-verbosity: detailed
+  verbosity: detailed
