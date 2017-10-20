@@ -8,6 +8,8 @@ environment:
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
 install:
   - dir
+  - set
+  - ps: 'Get-ChildItem env:'
   - echo "%MYGET_FEED%"
   - echo "%MYGET_API_KEY%"
 build_script:
