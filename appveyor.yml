@@ -8,6 +8,8 @@ environment:
     secure: yYHBdK/0WBIzCZ89/ux8dw==
 install:
   - dir
+  - echo "%MYGET_FEED%"
+  - echo "%MYGET_API_KEY%"
 build_script:
   # a5m2
   - choco pack %APPVEYOR_BUILD_FOLDER%\a5m2\a5m2.nuspec
