@@ -1,23 +1,17 @@
 image: Visual Studio 2015
 version: 0.0.1.{build}
 environment:
-  PATH: '%PATH%;C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1'
+  MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1'
+  MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1'
 init:
-- cmd: >-
-    echo %PATH%
-
-    echo %CD%
-
-    dir
-
-    choco --version
-
-    choco source
-
-    choco list -lo
-
-    dir C:\
-
-    where gcc
+  - echo %PATH%
+  - echo %CD%
+  - dir
+  - choco --version
+  - choco source
+  - choco list -lo
+  - dir %MINGW_32BIT%\bin
+  - dir %MINGW_64BIT%\bin
+  - where gcc make
 build:
-  verbosity: detailed
+verbosity: detailed
