@@ -3,18 +3,18 @@ version: 0.0.1.{build}
 environment:
   MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32'
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
-init:
-  - echo %PATH%
-  - echo %CD%
-  - choco --version
-  - choco source
-  - choco list -lo
-  - dir C:\mingw-w64
-  - dir %MINGW_32BIT%
-  - dir %MINGW_64BIT%
 install:
   - dir
 build_script:
-  - echo "NOT IMPLEMENTED"
+  # a5m2
+  - cd %APPVEYOR_BUILD_FOLDER%\a5m2
+  - cpack
+  # cpdf-cr
+  - cd %APPVEYOR_BUILD_FOLDER%\cpdf-cr
+  - cpack
+  - test.bat
+  # check build artifacts
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - dir a5m2 cpdf-cr
 build:
   verbosity: detailed
