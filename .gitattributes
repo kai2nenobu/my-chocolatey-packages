@@ -1,4 +1,3 @@
 *.sh	eol=lf
 *.bash	eol=lf
 *.bat	eol=crlf
-*.yml	eol=crlf
