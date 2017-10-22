@@ -12,10 +12,7 @@ environment:
   MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32'
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
 before_build:
-  - ps: |
-      $array = $env:APPVEYOR_REPO_BRANCH -split '/'
-      $env:PREFIX = $array[0]
-      $env:PACKAGE_ID = $array[1]
+  - for /f "tokens=1-2 delims=/" %%a in ("%APPVEYOR_REPO_BRANCH%") do set PREFIX=%%a & set PACKAGE_ID=%%b
   - echo %PREFIX%
   - echo %PACKAGE_ID%
   - exit /b 1
