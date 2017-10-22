@@ -1,4 +1,4 @@
-[![kai2nenobu MyGet Build Status](https://www.myget.org/BuildSource/Badge/kai2nenobu?identifier=abe34d9a-9b43-479b-8a8c-9a735c5cc036)](https://www.myget.org/)
+[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/1vv03ri8bujes620/branch/master?svg=true)](https://ci.appveyor.com/project/kai2nenobu/chocolatey-packages/branch/master)
 
 # What is this repository?
 
