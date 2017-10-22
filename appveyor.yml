@@ -25,9 +25,9 @@ before_build:
           exit 1
         }
       } else {
-      $array = $env:APPVEYOR_REPO_BRANCH -split '/'
-      $env:PREFIX = $array[0]
-      $env:PACKAGE_ID = $array[1]
+        $array = $env:APPVEYOR_REPO_BRANCH -split '/'
+        $env:PREFIX = $array[0]
+        $env:PACKAGE_ID = $array[1]
       }
 build_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
