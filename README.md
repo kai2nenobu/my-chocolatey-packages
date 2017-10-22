@@ -7,7 +7,11 @@ This repository stores chocolatey packages for my own.
 These packages are built on [MyGet](https://www.myget.org/) automatically and stored in https://www.myget.org/F/kai2nenobu (public feed).
 
 # Package List
-- [cpdf-cr](cpdf-cr) ([Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/))
+
+| id                 | title                                                                                  |
+|--------------------|----------------------------------------------------------------------------------------|
+| [a5m2](a5m2)       | [A5:SQL Mk-2](http://a5m2.mmatsubara.com/)                                             |
+| [cpdf-cr](cpdf-cr) | [Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/) |
 
 # How to use
 
