@@ -20,7 +20,7 @@ before_build:
 build_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
   # Packaging
-  - for /f "tokens=* usebackq" %%v in (`type VERSION`) do choco pack --version %%v
+  - choco pack
   - dir
 test_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
