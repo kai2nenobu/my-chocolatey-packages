@@ -17,9 +17,6 @@ before_build:
       $array = $env:APPVEYOR_REPO_BRANCH -split '/'
       $env:PREFIX = $array[0]
       $env:PACKAGE_ID = $array[1]
-  - echo "%PREFIX%"
-  - echo "%PACKAGE_ID%"
-  - exit /b 1
 build_script:
   # a5m2
   - choco pack %APPVEYOR_BUILD_FOLDER%\a5m2\a5m2.nuspec
