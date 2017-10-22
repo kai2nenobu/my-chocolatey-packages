@@ -17,7 +17,7 @@ before_build:
   - ps: |
       if ($env:APPVEYOR_REPO_BRANCH -eq 'master')  {
         if ($env:APPVEYOR_REPO_TAG_NAME) {
-          $array = $env:APPVEYOR_REPO_BRANCH -split '/'
+          $array = $env:APPVEYOR_REPO_TAG_NAME -split '/'
           $env:PACKAGE_ID = $array[0]
           $env:PACKAGE_VERSION = $array[1]
         } else {
