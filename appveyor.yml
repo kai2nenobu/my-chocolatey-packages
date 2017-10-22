@@ -11,8 +11,15 @@ environment:
     secure: Y/8UFTPxim7reHigg7iClTv5cu1QI4yA+zPs4DelBkFyMlUZxkzppJGkijKUuRVZ
   MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32'
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
-install:
-  - dir
+before_build:
+  - cmd: |
+    for /f "tokens=1-2 delims=/" %%a in ("%APPVEYOR_REPO_BRANCH%") do (
+        set PREFIX=%%a
+        set PACKAGE_ID=%%b
+    )
+  - echo %PREFIX%
+  - echo %PACKAGE_ID%
+  - exit /b 1
 build_script:
   # a5m2
   - choco pack %APPVEYOR_BUILD_FOLDER%\a5m2\a5m2.nuspec
