@@ -13,7 +13,7 @@ environment:
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
 before_build:
   - ps: |
-      $array = $env:APPVEYOR_REPO_BRANCH '/'
+      $array = $env:APPVEYOR_REPO_BRANCH -split '/'
       $env:PREFIX = $array[0]
       $env:PACKAGE_ID = $array[1]
   - echo %PREFIX%
