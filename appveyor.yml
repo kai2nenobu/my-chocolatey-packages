@@ -18,11 +18,9 @@ before_build:
       $env:PREFIX = $array[0]
       $env:PACKAGE_ID = $array[1]
 build_script:
-  # a5m2
-  - choco pack %APPVEYOR_BUILD_FOLDER%\a5m2\a5m2.nuspec
-  # cpdf-cr
-  - choco pack %APPVEYOR_BUILD_FOLDER%\cpdf-cr\cpdf-cr.nuspec
-  # check build artifacts
+  - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
+  # Packaging
+  - for /f "tokens=* usebackq" %%v in (`type VERSION`) do choco pack --version %%v
   - dir
 test_script:
   - '%APPVEYOR_BUILD_FOLDER%\a5m2\test.bat'
