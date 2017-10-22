@@ -24,5 +24,9 @@ deploy_script:
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
+notifications:
+  - provider: Slack
+    incoming_webhook:
+      secure: Xy6BVJYVnM0lJ0eD9Uw8z1XSEFErqUbRozlhX7gmoAWDUJ2VfDgH3JId4mAOkz3vZ6wlQenfCc2Lyotvf0ABfZygpjB0qYD++2Pl/HsRLPw=
 build:
   verbosity: detailed
