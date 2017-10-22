@@ -1,26 +1,45 @@
 image: Visual Studio 2015
 version: 0.0.1.{build}
+
+branches:
+  only:
+    - master
+    - /package\/.*/
+
 environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
   MYGET_API_KEY:
     secure: Y/8UFTPxim7reHigg7iClTv5cu1QI4yA+zPs4DelBkFyMlUZxkzppJGkijKUuRVZ
   MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32'
   MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
-install:
-  - dir
+before_build:
+  # Detect a target package from a tag name or a branch name
+  - ps: |
+      if ($env:APPVEYOR_REPO_BRANCH -eq 'master')  {
+        if ($env:APPVEYOR_REPO_TAG_NAME) {
+          $array = $env:APPVEYOR_REPO_BRANCH -split '/'
+          $env:PACKAGE_ID = $array[0]
+          $env:PACKAGE_VERSION = $array[1]
+        } else {
+          Write-Error -Message "Build on master branch must have a tag"
+          exit 1
+        }
+      } else {
+        $array = $env:APPVEYOR_REPO_BRANCH -split '/'
+        $env:PREFIX = $array[0]
+        $env:PACKAGE_ID = $array[1]
+      }
 build_script:
-  # a5m2
-  - choco pack %APPVEYOR_BUILD_FOLDER%\a5m2\a5m2.nuspec
-  # cpdf-cr
-  - choco pack %APPVEYOR_BUILD_FOLDER%\cpdf-cr\cpdf-cr.nuspec
-  # check build artifacts
+  - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
+  # Packaging
+  - choco pack
   - dir
 test_script:
-  - '%APPVEYOR_BUILD_FOLDER%\a5m2\test.bat'
-  - '%APPVEYOR_BUILD_FOLDER%\cpdf-cr\test.bat'
+  - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
+  - if exist test.bat .\test.bat
 deploy_script:
-  - dir
-  - for %%p in (*.nupkg) do choco push %%p -s "%MYGET_FEED%" -k "%MYGET_API_KEY%"
+  - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
+  - choco push -s "%MYGET_FEED%" -k "%MYGET_API_KEY%"
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
