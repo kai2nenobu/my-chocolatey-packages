@@ -23,8 +23,8 @@ build_script:
   - for /f "tokens=* usebackq" %%v in (`type VERSION`) do choco pack --version %%v
   - dir
 test_script:
-  - '%APPVEYOR_BUILD_FOLDER%\a5m2\test.bat'
-  - '%APPVEYOR_BUILD_FOLDER%\cpdf-cr\test.bat'
+  - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
+  - if exist test.bat .\test.bat
 deploy_script:
   - dir
   - for %%p in (*.nupkg) do choco push %%p -s "%MYGET_FEED%" -k "%MYGET_API_KEY%"
