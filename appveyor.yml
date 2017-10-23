@@ -10,8 +10,8 @@ environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
   MYGET_API_KEY:
     secure: Y/8UFTPxim7reHigg7iClTv5cu1QI4yA+zPs4DelBkFyMlUZxkzppJGkijKUuRVZ
-  MINGW_32BIT: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32'
-  MINGW_64BIT: 'C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64'
+  MINGW_ROOT: 'C:\MinGW'
+  MSYS2_ROOT: 'C:\msys64'
 before_build:
   # Detect a target package from a tag name or a branch name
   - ps: |
