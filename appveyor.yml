@@ -15,6 +15,10 @@ environment:
 # Disable automatic builds
 build: off
 before_build:
+  - dir "%MINGW_ROOT%"
+  - dir "%MINGW_ROOT%\bin"
+  - dir "%MSYS2_ROOT%\usr\bin"
+  - dir "%MSYS2_ROOT%\mingw32\bin"
   # Detect a target package from a tag name or a branch name
   - ps: |
       if ($env:APPVEYOR_REPO_BRANCH -eq 'master')  {
