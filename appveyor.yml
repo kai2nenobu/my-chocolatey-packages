@@ -15,6 +15,8 @@ environment:
 # Disable automatic builds
 build: off
 before_build:
+  - ecbo "PATH"
+  - where gcc
   - dir "%MINGW_ROOT%"
   - dir "%MINGW_ROOT%\bin"
   - dir "%MSYS2_ROOT%\usr\bin"
