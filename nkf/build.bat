@@ -19,6 +19,7 @@ if errorlevel 1 exit /b %ERRORLEVEL%
 
 cd "%NKF_DIR%"
 REM Make nkf
+"%MAKE%" --debug CC="%GCC%" CFLAGS="-g -O2 -Wall -pedantic -DDEFAULT_NEWLINE=0x0D0A -DDEFAULT_CODE_WINDOWS_31J"
 if errorlevel 1 exit /b %ERRORLEVEL%
 
 REM Copy to bin direcory
