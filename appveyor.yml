@@ -31,6 +31,8 @@ before_build:
       }
 build_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
+  # Build
+  - if exist build.bat .\build.bat
   # Packaging
   - choco pack
   - dir
