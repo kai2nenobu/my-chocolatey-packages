@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>nkf</id>
+    <version>2.1.4-pre</version>
+    <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <!--<owners>__REPLACE_YOUR_NAME__</owners>-->
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>nkf Network Kanji Filter</title>
+    <authors>The nkf Project</authors>
+    <projectUrl>https://osdn.net/projects/nkf/simple/</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/cmigemo.png</iconUrl>-->
+    <copyright>The nkf Project</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <projectSourceUrl>https://osdn.net/projects/nkf/scm/git/nkf/</projectSourceUrl>
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags></tags>
+    <summary>Nkf is a yet another kanji code converter among networks, hosts and terminals.  It converts input kanji code to designated kanji code such as ISO-2022-JP, Shift_JIS, EUC-JP, UTF-8, UTF-16 or UTF-32.</summary>
+    <description>Nkf is a yet another kanji code converter among networks, hosts and terminals.</description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
