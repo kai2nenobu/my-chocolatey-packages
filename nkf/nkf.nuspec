@@ -15,7 +15,7 @@
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/cmigemo.png</iconUrl>-->
     <copyright>The nkf Project</copyright>
     <licenseUrl>https://osdn.net/softwaremap/trove_list.php?form_cat=195</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://osdn.net/projects/nkf/scm/git/nkf/</projectSourceUrl>
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
