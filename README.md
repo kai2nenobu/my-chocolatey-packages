@@ -13,6 +13,7 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 | [a5m2](a5m2)       | [A5:SQL Mk-2](http://a5m2.mmatsubara.com/)                                             |
 | [cmigemo](cmigemo) | [C/Migemo](https://github.com/koron/cmigemo)                                           |
 | [cpdf-cr](cpdf-cr) | [Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/) |
+| [nkf](nkf)         | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          |
 
 # How to use
 
