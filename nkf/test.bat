@@ -3,7 +3,7 @@ set PACKAGE_NAME=nkf
 set COMMAND_NAME=nkf
 
 REM Install a package in local
-choco install -y -s . %PACKAGE_NAME%
+choco install --pre -y -s . %PACKAGE_NAME%
 
 REM Verify command is in PATH
 %COMMAND_NAME% -V
