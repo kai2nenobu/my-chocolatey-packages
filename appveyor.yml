@@ -10,15 +10,16 @@ environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
   MYGET_API_KEY:
     secure: Y/8UFTPxim7reHigg7iClTv5cu1QI4yA+zPs4DelBkFyMlUZxkzppJGkijKUuRVZ
-  MINGW_ROOT: 'C:\mingw-w64\i686-5.3.0-posix-dwarf-rt_v4-rev0\mingw32'
+  MINGW_ROOT: 'C:\MinGW'
   MSYS2_ROOT: 'C:\msys64'
 # Disable automatic builds
 build: off
 before_build:
   # Workaround for Make not wanting sh.exe on PATH for MinGW
-  # refs. https://github.com/simbody/simbody/blob/add5e81adf8018974b526aace6432425ae91ee8e/appveyor.yml#L26-L27
   - set PATH=%PATH:C:\Program Files\Git\cmd;=%
   - set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
+  - set PATH=C:\MinGW\bin;%PATH%
+  - echo %PATH%
   - dir "%MINGW_ROOT%"
   - dir "%MINGW_ROOT%\bin"
   - dir "%MSYS2_ROOT%\usr\bin"
