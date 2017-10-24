@@ -15,6 +15,10 @@ environment:
 # Disable automatic builds
 build: off
 before_build:
+  # Workaround for Make not wanting sh.exe on PATH for MinGW
+  # refs. https://github.com/simbody/simbody/blob/add5e81adf8018974b526aace6432425ae91ee8e/appveyor.yml#L26-L27
+  - set PATH=%PATH:C:\Program Files\Git\cmd;=%
+  - set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
   - dir "%MINGW_ROOT%"
   - dir "%MINGW_ROOT%\bin"
   - dir "%MSYS2_ROOT%\usr\bin"
