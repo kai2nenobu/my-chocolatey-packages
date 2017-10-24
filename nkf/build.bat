@@ -22,10 +22,14 @@ REM Make nkf
 "%MAKE%" CC="%GCC%" CFLAGS="-g -O2 -Wall -pedantic -DDEFAULT_NEWLINE=0x0D0A -DDEFAULT_CODE_WINDOWS_31J"
 if errorlevel 1 exit /b %ERRORLEVEL%
 
-REM Copy to bin direcory
+REM Copy executable to bin direcory
 cd ..
 mkdir bin
 copy "%NKF_DIR%\nkf.exe" bin
+if errorlevel 1 exit /b %ERRORLEVEL%
+
+REM Copy documents
+copy "%NKF_DIR%\nkf.doc" .
 if errorlevel 1 exit /b %ERRORLEVEL%
 
 REM Print nkf version

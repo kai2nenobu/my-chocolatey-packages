@@ -32,5 +32,6 @@
   </metadata>
   <files>
     <file src="bin\**" target="bin" />
+    <file src="nkf.doc" target="." />
   </files>
 </package>
