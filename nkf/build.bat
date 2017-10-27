@@ -1,4 +1,4 @@
-setlocal
+setlocal enabledelayedexpansion
 
 REM Unix tools
 set CURL=%MSYS2_ROOT%\usr\bin\curl
