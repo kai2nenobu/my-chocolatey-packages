@@ -29,6 +29,6 @@
   </metadata>
   <files>
     <file src="bin\**" target="bin" />
-    <file src="nkf.doc" target="." />
+    <file src="doc\**" target="doc" />
   </files>
 </package>
