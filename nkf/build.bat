@@ -30,8 +30,10 @@ if errorlevel 1 exit /b %ERRORLEVEL%
 
 REM Copy documents
 mkdir doc
-copy "%NKF_DIR%\nkf.doc" "%NKF_DIR%\nkf.1" "%NKF_DIR%\nkf.1j" doc
-if errorlevel 1 exit /b %ERRORLEVEL%
+for %%d in (nkf.doc nkf.1 nkf.1j) do (
+    copy "%NKF_DIR%\%%d" doc
+    if errorlevel 1 exit /b !ERRORLEVEL!
+)
 
 REM Print nkf version
 bin\nkf -V
