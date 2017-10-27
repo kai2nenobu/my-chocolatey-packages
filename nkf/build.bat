@@ -29,7 +29,8 @@ copy "%NKF_DIR%\nkf.exe" bin
 if errorlevel 1 exit /b %ERRORLEVEL%
 
 REM Copy documents
-copy "%NKF_DIR%\nkf.doc" .
+mkdir doc
+copy "%NKF_DIR%\nkf.doc" "%NKF_DIR%\nkf.1" "%NKF_DIR%\nkf.1j" doc
 if errorlevel 1 exit /b %ERRORLEVEL%
 
 REM Print nkf version
