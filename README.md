@@ -26,7 +26,7 @@ Add an above feed to chocolatey source.
 Then you can install a package as usual as below.
 
 ```
-> choco install <package_name>
+> choco install <package_id>
 ```
 
 # References
