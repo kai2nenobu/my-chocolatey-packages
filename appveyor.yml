@@ -15,12 +15,9 @@ before_build:
   - set PATH=%PATH:C:\Program Files\Git\usr\bin;=%
   - set PATH=C:\MinGW\bin;%PATH%
   # Detect a target package from a tag name or a branch name
-  - echo %APPVEYOR_REPO_BRANCH%
-  - echo %APPVEYOR_REPO_TAG%
-  - echo %APPVEYOR_REPO_TAG_NAME%
   - ps: |
       if ($env:APPVEYOR_REPO_BRANCH -eq 'master')  {
-        if ($env:APPVEYOR_REPO_TAG) {
+        if ($env:APPVEYOR_REPO_TAG = "true") {
           $array = $env:APPVEYOR_REPO_TAG_NAME -split '/'
           $env:PACKAGE_ID = $array[0]
           $env:PACKAGE_VERSION = $array[1]
