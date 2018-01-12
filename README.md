@@ -8,11 +8,12 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 
 # Package List
 
-| id                 | title                                                                                  |
-|--------------------|----------------------------------------------------------------------------------------|
-| [a5m2](a5m2)       | [A5:SQL Mk-2](http://a5m2.mmatsubara.com/)                                             |
-| [cmigemo](cmigemo) | [C/Migemo](https://github.com/koron/cmigemo)                                           |
-| [cpdf-cr](cpdf-cr) | [Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/) |
+| id                 | title                                                                                  | release version | prerelease version |
+|--------------------|----------------------------------------------------------------------------------------|-----------------|--------------------|
+| [a5m2](a5m2)       | [A5:SQL Mk-2](http://a5m2.mmatsubara.com/)                                             |          2.12.2 |                    |
+| [cmigemo](cmigemo) | [C/Migemo](https://github.com/koron/cmigemo)                                           |             1.3 | 1.4-rc             |
+| [cpdf-cr](cpdf-cr) | [Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/) |           2.2.1 |                    |
+| [nkf](nkf)         | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          |           2.1.4 | 2.1.4-pre          |
 
 # How to use
 
@@ -25,7 +26,7 @@ Add an above feed to chocolatey source.
 Then you can install a package as usual as below.
 
 ```
-> choco install <package_name>
+> choco install <package_id>
 ```
 
 # References
