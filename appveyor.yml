@@ -1,6 +1,12 @@
 image: Visual Studio 2015
 version: 0.0.1.{build}
 
+branches:
+  only:
+    - master
+    - /package\/.*/
+
+skip_non_tags: false
 environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
   MYGET_API_KEY:
@@ -66,10 +72,3 @@ for:
     only:
       - master
   skip_non_tags: true
-
-# Run a build in package branch on every commit
--
-  branches:
-    only:
-      - /package\/.*/
-  skip_non_tags: false
