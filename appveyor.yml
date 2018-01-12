@@ -17,7 +17,7 @@ before_build:
   # Detect a target package from a tag name or a branch name
   - ps: |
       if ($env:APPVEYOR_REPO_BRANCH -eq 'master')  {
-        if ($env:APPVEYOR_REPO_TAG_NAME) {
+        if ($env:APPVEYOR_REPO_TAG) {
           $array = $env:APPVEYOR_REPO_TAG_NAME -split '/'
           $env:PACKAGE_ID = $array[0]
           $env:PACKAGE_VERSION = $array[1]
