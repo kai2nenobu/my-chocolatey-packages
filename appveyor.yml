@@ -1,10 +1,6 @@
 image: Visual Studio 2015
 version: 0.0.1.{build}
 
-branches:
-  only:
-    - /package\/.*/
-
 environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
   MYGET_API_KEY:
@@ -57,3 +53,17 @@ notifications:
     on_build_success: true
     on_build_failure: true
     on_build_status_changed: false
+
+for:
+  # Run a build in master branch only if a tag is pushed
+  -
+    branches:
+      only:
+        - master
+    skip_non_tags: true
+  # Run a build in package branch on every commit
+  -
+    branches:
+      only:
+        - /package\/.*/
+    skip_non_tags: false
