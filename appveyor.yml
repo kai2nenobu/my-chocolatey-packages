@@ -6,7 +6,6 @@ branches:
     - master
     - /package\/.*/
 
-skip_non_tags: false
 environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
   MYGET_API_KEY:
