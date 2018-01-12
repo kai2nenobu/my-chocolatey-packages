@@ -30,7 +30,12 @@ before_build:
         $env:PREFIX = $array[0]
         $env:PACKAGE_ID = $array[1]
       }
+      if ($env:PACKAGE_ID = "") {
+        Write-Error -Message "Cannot extract a package id"
+        exit 2
+      }
 build_script:
+  - echo Build %PACKAGE_ID%
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
   # Build
   - if exist build.bat .\build.bat
