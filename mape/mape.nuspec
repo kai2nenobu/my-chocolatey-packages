@@ -18,7 +18,7 @@
     <copyright>Takamasa Uramoto</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ipponshimeji/MAPE</projectSourceUrl>
     <docsUrl>https://github.com/ipponshimeji/MAPE/blob/master/Documentation/ja/Index.md</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
