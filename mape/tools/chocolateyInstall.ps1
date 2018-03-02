@@ -11,3 +11,14 @@ Install-ChocolateyZipPackage `
   -Url $url `
   -Checksum $checksum `
   -UnzipLocation $location
+
+## Create a shortcut for GUI program in Common Programs Location
+$gui = Join-Path $location 'MAPE\mapegui.exe'
+$icon = Join-Path $location 'MAPE\Resources\OnIcon.ico'
+$commonPrograms = [Environment]::GetFolderPath('CommonPrograms')
+$shortcutPath = Join-Path $commonPrograms '認証プロキシ爆発しろ！ (MAPE).lnk'
+
+Install-ChocolateyShortcut `
+  -ShortcutFilePath $shortcutPath `
+  -TargetPath $gui `
+  -IconLocation $icon
