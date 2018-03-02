@@ -17,7 +17,7 @@
     <iconUrl>https://cdn.rawgit.com/ipponshimeji/MAPE/1.0.19.0_beta/Source/Windows/GUI/Resources/OnIcon.ico</iconUrl>
     <copyright>Takamasa Uramoto</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://github.com/coherentgraphics/cpdf-binaries/blob/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/ipponshimeji/MAPE/blob/1.0.19.0_beta/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ipponshimeji/MAPE</projectSourceUrl>
     <docsUrl>https://github.com/ipponshimeji/MAPE/blob/master/Documentation/ja/Index.md</docsUrl>
