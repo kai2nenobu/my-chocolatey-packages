@@ -1,8 +1,8 @@
 setlocal
 
 set PACKAGE_NAME=mape
-set %CLI_NAME%=mape
-set %GUI_NAME%=mapegui
+set CLI_NAME=mape
+set GUI_NAME=mapegui
 
 REM Install a package in local
 choco install -y -s . -pre %PACKAGE_NAME%
