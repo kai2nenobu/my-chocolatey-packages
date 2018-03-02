@@ -1,11 +1,6 @@
 image: Visual Studio 2015
 version: 0.0.1.{build}
 
-branches:
-  only:
-    - master
-    - /package\/.*/
-
 environment:
   MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
   MYGET_API_KEY:
@@ -71,3 +66,8 @@ for:
       only:
         - master
     skip_non_tags: true
+  -
+    branches:
+      only:
+        - /package\/.*/
+    skip_non_tags: false
