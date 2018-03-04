@@ -1,5 +1,7 @@
 setlocal
 
+chcp 65001
+
 set PACKAGE_NAME=mape
 set CLI_NAME=mape
 set GUI_NAME=mapegui
