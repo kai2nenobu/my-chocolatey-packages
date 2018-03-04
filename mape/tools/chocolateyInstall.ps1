@@ -1,7 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
-chcp
-
 ## Include common configurations
 $scriptDirectory = Split-Path -Path $MyInvocation.MyCommand.Definition -Parent
 . "$scriptDirectory\common.ps1"
