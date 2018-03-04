@@ -1,6 +1,6 @@
 setlocal
 
-chcp 65001
+chcp
 
 set PACKAGE_NAME=mape
 set CLI_NAME=mape
