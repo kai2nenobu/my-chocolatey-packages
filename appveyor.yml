@@ -43,6 +43,7 @@ build_script:
   - choco pack
   - dir
 test_script:
+  - chcp 65001
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
   - if exist test.bat .\test.bat
 deploy_script:
