@@ -1,4 +1,4 @@
-﻿# May Authentication Proxy Explode
+﻿# May Authentication Proxies Explode
 
 This package will download and install [MAPE](https://github.com/ipponshimeji/MAPE).
 
