@@ -9,7 +9,7 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 # Package List
 
 | id                         | title                                                                                  | release version | prerelease version |
-|----------------------------+----------------------------------------------------------------------------------------+-----------------+--------------------|
+|----------------------------|----------------------------------------------------------------------------------------|-----------------|--------------------|
 | [a5m2](a5m2)               | [A5:SQL Mk-2](http://a5m2.mmatsubara.com/)                                             |          2.12.2 |                    |
 | [busybox-w32](busybox-w32) | [busybox-w32](https://frippery.org/busybox/)                                           |          1.29.0 | 1.29.0-pre         |
 | [cmigemo](cmigemo)         | [C/Migemo](https://github.com/koron/cmigemo)                                           |             1.3 | 1.4-rc             |
