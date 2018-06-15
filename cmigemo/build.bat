@@ -14,10 +14,10 @@ choco install -y nkf
 REM Fetch source
 "%GIT_COMMAND%" clone --depth 1 --branch "%CMIGEMO_VERSION%" "%CMIGEMO_REPO%" src
 cd src
-git rev-parse HEAD
+"%GIT_COMMAND%" rev-parse HEAD
 
 REM Build by mingw32
-"%MSYS2_SHELL" -mingw32 -here -c "(sh configure --prefix=../cmigemo;  mingw32-make ICONV_EUCJP_TO_CP932='nkf -x --ic=eucjp-ms --oc=shift_jis' ICONV_CP932_TO_UTF8='nkf -x --ic=shift_jis --oc=utf-8' mingw-install;) > build.log 2>&1"
+"%MSYS2_SHELL%" -mingw32 -here -c "(sh configure --prefix=../cmigemo;  mingw32-make ICONV_EUCJP_TO_CP932='nkf -x --ic=eucjp-ms --oc=shift_jis' ICONV_CP932_TO_UTF8='nkf -x --ic=shift_jis --oc=utf-8' mingw-install;) > build.log 2>&1"
 type build.log
 
 REM Print version
