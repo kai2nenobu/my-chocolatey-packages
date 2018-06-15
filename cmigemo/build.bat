@@ -11,13 +11,6 @@ REM Install nkf for encoding conversion
 choco source add -n kai2nenobu -s https://www.myget.org/F/kai2nenobu
 choco install -y nkf
 
-dir %MSYS2_ROOT%
-echo PATH = %PATH%
-echo MSYS2_PATH_TYPE = %MSYS2_PATH_TYPE%
-where mingw32-make
-where nkf
-where sh
-
 REM Fetch source
 "%GIT_COMMAND%" clone --depth 1 --branch "%CMIGEMO_VERSION%" "%CMIGEMO_REPO%" src
 cd src

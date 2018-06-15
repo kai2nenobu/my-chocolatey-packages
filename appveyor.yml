@@ -51,7 +51,6 @@ deploy_script:
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
-  - path: 'cmigemo'
 notifications:
   - provider: Slack
     incoming_webhook:
