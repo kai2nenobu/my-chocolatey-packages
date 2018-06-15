@@ -32,5 +32,6 @@
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="cmigemo\**" target="cmigemo" />
   </files>
 </package>
