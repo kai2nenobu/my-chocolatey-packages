@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>netupvim</id>
+    <version>1.4.1-pre</version>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/netupvim</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>kai2nenobu</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>netupvim</title>
+    <authors>MURAOKA Taro</authors>
+    <projectUrl>https://github.com/koron/netupvim</projectUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <copyright>MURAOKA Taro</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <licenseUrl>https://github.com/koron/netupvim/blob/v1.4.1/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/koron/netupvim</projectSourceUrl>
+    <docsUrl>https://github.com/koron/netupvim/blob/v1.4.1/README.md</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/koron/netupvim/issues</bugTrackerUrl>
+    <tags>vim vi editor</tags>
+    <summary>Network updater for Vim (+kaoriya) on Windows</summary>
+    <description>netupvim is a program to update, restore or install Vim (+kaoriya version) for Windows.</description>
+    <releaseNotes>https://github.com/koron/netupvim/releases</releaseNotes>
+    <!-- =============================== -->
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
