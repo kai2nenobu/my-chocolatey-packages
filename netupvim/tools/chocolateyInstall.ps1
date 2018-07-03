@@ -17,14 +17,14 @@ Install-ChocolateyZipPackage `
 ## Create a shortcut for updater
 $CommonPrograms =([Environment]::GetFolderPath('CommonPrograms'))
 $updater = Join-Path $installPath 'UPDATE.bat'
-$updaterShortcut = Join-Path $CommonPrograms "$packageName/Update Vim.lnk"
+$updaterShortcut = Join-Path $CommonPrograms "$packageName/Update Vim ($packageName).lnk"
 Install-ChocolateyShortcut `
   -ShortcutFilePath $updaterShortcut `
   -TargetPath $updater
 
 ## Create a shortcut for restorer
 $restorer = Join-Path $installPath 'RESTORE.bat'
-$restorerShortcut = Join-Path $CommonPrograms "$packageName/Restore Vim.lnk"
+$restorerShortcut = Join-Path $CommonPrograms "$packageName/Restore Vim ($packageName).lnk"
 Install-ChocolateyShortcut `
   -ShortcutFilePath $restorerShortcut `
   -TargetPath $restorer
