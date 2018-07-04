@@ -15,7 +15,7 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 | [cmigemo](cmigemo)         | [C/Migemo](https://github.com/koron/cmigemo)                                           |             1.3 | 1.4-rc             |
 | [cpdf-cr](cpdf-cr)         | [Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/) |           2.2.1 |                    |
 | [mape](mape)               | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)             |        1.0.20.0 | 1.0.20.0-pre       |
-| [netupvim](netupvim)       | [netupvim](https://github.com/koron/netupvim)                                          |                 | 1.4.1-pre          |
+| [netupvim](netupvim)       | [Network updater for Vim (+kaoriya)](https://github.com/koron/netupvim)                |                 | 1.4.1-pre          |
 | [nkf](nkf)                 | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          |           2.1.4 | 2.1.4-pre          |
 
 # How to use
