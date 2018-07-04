@@ -2,8 +2,8 @@
 
 $packageName = $env:ChocolateyPackageName
 $installPath = Join-Path (Get-ToolsLocation) $packageName
-$url         = 'https://github.com/koron/netupvim/releases/download/v1.3/netupvim-v1.3.zip'
-$checksum    = 'CD45974FA577A1725BFAB1F13D017203'
+$url         = 'https://github.com/koron/netupvim/releases/download/v1.4.1/netupvim-v1.4.1.zip'
+$checksum    = 'C7999D4F29A0883CF4327DF9131AA57A'
 $checksumType = 'md5'
 
 ## Download and install netupvim in a tools directory (Typically "C:\tools")

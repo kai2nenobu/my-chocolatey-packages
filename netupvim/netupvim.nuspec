@@ -3,7 +3,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>netupvim</id>
-    <version>1.3-pre</version>
+    <version>1.4.1-pre</version>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/netupvim</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>kai2nenobu</owners>
@@ -17,10 +17,10 @@
     <!-- <iconUrl></iconUrl> -->
     <copyright>MURAOKA Taro</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://github.com/koron/netupvim/blob/v1.3/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/koron/netupvim/blob/v1.4.1/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/koron/netupvim</projectSourceUrl>
-    <docsUrl>https://github.com/koron/netupvim/blob/v1.3/README.md</docsUrl>
+    <docsUrl>https://github.com/koron/netupvim/blob/v1.4.1/README.md</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/koron/netupvim/issues</bugTrackerUrl>
     <tags>vim vi editor</tags>
