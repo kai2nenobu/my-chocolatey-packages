@@ -17,8 +17,7 @@ cd src
 "%GIT_COMMAND%" rev-parse HEAD
 
 REM Build by mingw32
-call "%MSYS2_SHELL%" -mingw32 -no-start -here -c "sh configure --prefix=../cmigemo; mingw32-make ICONV_EUCJP_TO_CP932='nkf -x --ic=eucjp-ms --oc=shift_jis' ICONV_CP932_TO_UTF8='nkf -x --ic=shift_jis --oc=utf-8' mingw-install > build.log 2>&1"
-type build.log
+call "%MSYS2_SHELL%" -mingw32 -defterm -no-start -here -c "sh configure --prefix=../cmigemo; mingw32-make ICONV_EUCJP_TO_CP932='nkf -x --ic=eucjp-ms --oc=shift_jis' ICONV_CP932_TO_UTF8='nkf -x --ic=shift_jis --oc=utf-8' mingw-install"
 
 REM Print version
 ..\cmigemo\bin\cmigemo --help
