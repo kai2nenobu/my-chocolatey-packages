@@ -39,15 +39,16 @@ build_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
   # Build
   - if exist build.bat .\build.bat
+  - if exist build.ps1 powershell -File .\build.ps1
   # Packaging
-  - choco pack
+  - if exist %PACKAGE_ID%.nuspec choco pack
   - dir
 test_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
   - if exist test.bat .\test.bat
 deploy_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
-  - choco push -s "%MYGET_FEED%" -k "%MYGET_API_KEY%"
+  - for %%p in (*.nupkg) do choco push -s "%MYGET_FEED%" -k "%MYGET_API_KEY%" %%p
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
