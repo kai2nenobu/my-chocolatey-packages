@@ -1,7 +1,7 @@
 
 # Pleiades All in One
 
-This repository stores a chocolatey package to install [Pleiades All in One](http://mergedoc.osdn.jp/). Pleiades All in One (Standard Edition) is a eclipse distribution with pleiades (Japanese translation pluin) and other useful plugins. Moreover, Full Edition includes JRE for eclipse and peripheral tools (like compiler, runtime). So you can launch eclipse without installing any other programs.
+This repository stores a chocolatey package to install [Pleiades All in One](http://mergedoc.osdn.jp/). Pleiades All in One (Standard Edition) is an eclipse distribution with pleiades (Japanese translation pluin) and other useful plugins. Moreover, Full Edition includes JRE for eclipse and peripheral tools (like compiler, runtime). So you can launch eclipse without installing any other programs.
 
 # Package Information
 
