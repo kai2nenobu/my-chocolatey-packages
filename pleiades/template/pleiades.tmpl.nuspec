@@ -3,7 +3,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>{{PackageId}}</id>
-    <version>2018.09.20180925-pre</version>
+    <version>{{PackageVersion}}</version>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/pleiades</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>kai2nenobu</owners>

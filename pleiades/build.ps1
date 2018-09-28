@@ -5,6 +5,7 @@ $ErrorActionPreference = 'Stop';  # stop on all errors
 [string[]]$editions = 'standard', 'full'
 
 $Pleiades = @{
+  Version='2018.09.20180925-pre'
   platform=@{
     Title='Pleiades All in One Platform'
     Tag=''
@@ -63,7 +64,8 @@ foreach ($lang in $languages) {
     ## Generate a nuspec file
     $targetNuspec = "${PackageId}.nuspec"
     Get-Content -Encoding UTF8 $templateNuspec | % {
-      $_ -replace '{{PackageId}}', $PackageId `
+      $_ -replace '{{PackageVersion}}', $Pleiades.Version `
+        -replace '{{PackageId}}', $PackageId `
         -replace '{{PackageTitle}}', $Pleiades[$lang].Title `
         -replace '{{PackageTag}}', $Pleiades[$lang].Tag
     } | Out-File $targetNuspec -Encoding UTF8
