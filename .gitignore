@@ -1,2 +1,5 @@
 *.nupkg
 bin/
+
+# nuspec for Pleiades are auto generated
+pleiades/*.nuspec
