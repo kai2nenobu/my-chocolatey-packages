@@ -41,7 +41,7 @@ build_script:
   - if exist build.bat .\build.bat
   - if exist build.ps1 powershell -File .\build.ps1
   # Packaging
-  - choco pack
+  - if exist %PACKAGE_ID%.nuspec choco pack
   - dir
 test_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
