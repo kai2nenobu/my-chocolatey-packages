@@ -48,7 +48,7 @@ test_script:
   - if exist test.bat .\test.bat
 deploy_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
-  - choco push -s "%MYGET_FEED%" -k "%MYGET_API_KEY%"
+  - for %%p in (*.nupkg) do choco push -s "%MYGET_FEED%" -k "%MYGET_API_KEY%" %%p
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
