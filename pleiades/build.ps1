@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop';  # stop on all errors
 [string[]]$languages = 'platform', 'java'
 [string[]]$editions = 'standard', 'full'
 
-$variants = @{
+$Pleiades = @{
   platform=@{
     Title='Pleiades All in One Platform'
     Tag=''
@@ -64,17 +64,17 @@ foreach ($lang in $languages) {
     $targetNuspec = "${PackageId}.nuspec"
     Get-Content -Encoding UTF8 $templateNuspec | % {
       $_ -replace '{{PackageId}}', $PackageId `
-        -replace '{{PackageTitle}}', $variants[$lang].Title `
-        -replace '{{PackageTag}}', $variants[$lang].Tag
+        -replace '{{PackageTitle}}', $Pleiades[$lang].Title `
+        -replace '{{PackageTag}}', $Pleiades[$lang].Tag
     } | Out-File $targetNuspec -Encoding UTF8
     ## Generate a install script
     $targetScript = '.\tools\ChocolateyInstall.ps1'
     Get-Content -Encoding UTF8 $templateScript | % {
-      $_ -replace '{{PackageTitle}}', $variants[$lang].Title `
-        -replace '{{Url}}', $variants[$lang][$ed].Url `
-        -replace '{{Checksum}}', $variants[$lang][$ed].Checksum `
-        -replace '{{Url64}}', $variants[$lang][$ed].Url64 `
-        -replace '{{Checksum64}}', $variants[$lang][$ed].Checksum64
+      $_ -replace '{{PackageTitle}}', $Pleiades[$lang].Title `
+        -replace '{{Url}}', $Pleiades[$lang][$ed].Url `
+        -replace '{{Checksum}}', $Pleiades[$lang][$ed].Checksum `
+        -replace '{{Url64}}', $Pleiades[$lang][$ed].Url64 `
+        -replace '{{Checksum64}}', $Pleiades[$lang][$ed].Checksum64
     } | Out-File $targetScript -Encoding UTF8
     ## Packaging
     choco pack $targetNuspec
