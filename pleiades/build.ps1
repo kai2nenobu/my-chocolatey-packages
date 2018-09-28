@@ -72,8 +72,7 @@ foreach ($lang in $languages) {
     ## Generate a install script
     $targetScript = '.\tools\ChocolateyInstall.ps1'
     Get-Content -Encoding UTF8 $templateScript | % {
-      $_ -replace '{{PackageTitle}}', $Pleiades[$lang].Title `
-        -replace '{{Url}}', $Pleiades[$lang][$ed].Url `
+      $_ -replace '{{Url}}', $Pleiades[$lang][$ed].Url `
         -replace '{{Checksum}}', $Pleiades[$lang][$ed].Checksum `
         -replace '{{Url64}}', $Pleiades[$lang][$ed].Url64 `
         -replace '{{Checksum64}}', $Pleiades[$lang][$ed].Checksum64
