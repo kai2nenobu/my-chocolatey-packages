@@ -7,7 +7,6 @@ $checksum    = '{{Checksum}}'
 $url64       = '{{Url64}}'
 $checksum64  = '{{Checksum64}}'
 $checksumType = 'md5'
-$subFolder   = 'pleiades'
 
 ## Download and install pleaides in a tools directory (Typically "C:\tools")
 Install-ChocolateyZipPackage `
@@ -18,12 +17,11 @@ Install-ChocolateyZipPackage `
   -Url64bit $url64 `
   -Checksum64 $checksum64 `
   -ChecksumType64 $checkstumType `
-  -UnzipLocation $installPath `
-  -SpecificFolder $subFolder
+  -UnzipLocation $installPath
 
 ## Create a shortcut to eclipse.exe
 $CommonPrograms =([Environment]::GetFolderPath('CommonPrograms'))
-$executable = Join-Path $installPath 'eclipse/eclipse.exe'
+$executable = Join-Path $installPath 'pleiades/eclipse/eclipse.exe'
 $workdir = Split-Path $executable -Parent
 $shortcut = Join-Path $CommonPrograms "$packageName/{{PackageTitle}}.lnk"
 Install-ChocolateyShortcut `
