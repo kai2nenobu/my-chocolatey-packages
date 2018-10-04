@@ -20,3 +20,13 @@ Install-ChocolateyZipPackage `
   -ChecksumType64 $checkstumType `
   -UnzipLocation $installPath `
   -SpecificFolder $subFolder
+
+## Create a shortcut to eclipse.exe
+$CommonPrograms =([Environment]::GetFolderPath('CommonPrograms'))
+$executable = Join-Path $installPath 'eclipse/eclipse.exe'
+$workdir = Split-Path $executable -Parent
+$shortcut = Join-Path $CommonPrograms "$packageName/{{PackageTitle}}.lnk"
+Install-ChocolateyShortcut `
+  -ShortcutFilePath $shortcut `
+  -TargetPath $executable `
+  -WorkingDirectory $workdir
