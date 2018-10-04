@@ -7,6 +7,7 @@ $checksum    = '{{Checksum}}'
 $url64       = '{{Url64}}'
 $checksum64  = '{{Checksum64}}'
 $checksumType = 'md5'
+$subFolder   = 'pleiades'
 
 ## Download and install netupvim in a tools directory (Typically "C:\tools")
 Install-ChocolateyZipPackage `
@@ -17,4 +18,5 @@ Install-ChocolateyZipPackage `
   -Url64bit $url64 `
   -Checksum64 $checksum64 `
   -ChecksumType64 $checkstumType `
-  -UnzipLocation $installPath
+  -UnzipLocation $installPath `
+  -SpecificFolder $subFolder
