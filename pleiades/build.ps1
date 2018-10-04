@@ -5,7 +5,7 @@ $ErrorActionPreference = 'Stop';  # stop on all errors
 [string[]]$editions = 'standard', 'full'
 
 $Pleiades = @{
-  Version='2018.09.20180925.1-pre'
+  Version='2018.09.20180925.1'
   platform=@{
     Title='Pleiades All in One Platform'
     Tag=''
