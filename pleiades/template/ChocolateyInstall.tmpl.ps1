@@ -9,7 +9,7 @@ $checksum64  = '{{Checksum64}}'
 $checksumType = 'md5'
 $subFolder   = 'pleiades'
 
-## Download and install netupvim in a tools directory (Typically "C:\tools")
+## Download and install pleaides in a tools directory (Typically "C:\tools")
 Install-ChocolateyZipPackage `
   -PackageName $packageName `
   -Url $url `

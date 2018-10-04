@@ -3,7 +3,7 @@
 $packageName = $env:ChocolateyPackageName
 $installPath = Join-Path (Get-ToolsLocation) $packageName
 
-## Delete installed netupvim
+## Delete installed pleiades
 if (Test-Path $installPath) {
     Remove-Item -Path $installPath -Recurse -Force
 }
