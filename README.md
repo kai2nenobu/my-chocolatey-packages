@@ -16,7 +16,7 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 | [cpdf-cr](cpdf-cr)                                                                                   | [Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/) |            2.2.1 |                |
 | [mape](mape)                                                                                         | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)             |         1.0.20.0 |                |
 | [nkf](nkf)                                                                                           | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          |            2.1.4 | ✓              |
-| [pleiades](pleiades)-platform <br> pleiades-platform-full <br> pleiades-java <br> pleiades-java-full | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | 2018.09.20180925.1 |                |
+| [pleiades](pleiades)-platform <br> pleiades-platform-full <br> pleiades-java <br> pleiades-java-full | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | 2018.09.20181004 |                |
 
 # How to use
 
