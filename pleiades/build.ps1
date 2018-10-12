@@ -5,37 +5,37 @@ $ErrorActionPreference = 'Stop';  # stop on all errors
 [string[]]$editions = 'standard', 'full'
 
 $Pleiades = @{
-  Version='2018.09.20180925.1-pre'
+  Version='2018.09.20181004-pre'
   platform=@{
     Title='Pleiades All in One Platform'
     Tag=''
     standard=@{
-      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-32bit_20180925.zip'
-      Checksum='3a6e98fe8a448d9ca7e94bf3beaf9a25'
-      Url64='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-64bit_20180925.zip'
-      Checksum64='2bcc5e3b6688d3f6784c93468dba56d0'
+      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-32bit_20181004.zip'
+      Checksum='1c23d9a9e67b944ff526b67db704858c'
+      Url64='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-64bit_20181004.zip'
+      Checksum64='d8f293ccc383e2b71457701e8a5afefe'
     }
     full=@{
-      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-32bit-jre_20180925.zip'
-      Checksum='4b1fd4a85547c80b5a8133493d83e8ee'
-      Url64='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-64bit-jre_20180925.zip'
-      Checksum64='559c7625fa41965b49490f46bfaf8a7c'
+      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-32bit-jre_20181004.zip'
+      Checksum='4d1ce8adc329dcfff645ea5ad0eb8461'
+      Url64='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-64bit-jre_20181004.zip'
+      Checksum64='3f1e699d2da93db59d0309accf58a8f3'
     }
   }
   java=@{
     Title='Pleiades All in One Java'
     Tag='java'
     standard=@{
-      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-32bit_20180925.zip'
-      Checksum='88532187714f951f90486a85a54993f9'
-      Url64='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-64bit_20180925.zip'
-      Checksum64='d36b8e591b8eed87f465c0106dd31615'
+      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-32bit_20181004.zip'
+      Checksum='0be5a93235e2a192bdaa3705a1d2e001'
+      Url64='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-64bit_20181004.zip'
+      Checksum64='dbe7d3ad89a809c07d91d91c52239bac'
     }
     full=@{
-      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-32bit-jre_20180925.zip'
-      Checksum='1e6fc190144175a2c49c294ea475ba45'
-      Url64='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-64bit-jre_20180925.zip'
-      Checksum64='7963c089d1cd76372e2f33500df6f3ee'
+      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-32bit-jre_20181004.zip'
+      Checksum='ad8774957171ed38580467b8c563b0f5'
+      Url64='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-64bit-jre_20181004.zip'
+      Checksum64='7f63a0cedf87d083f3c4249cf7700fdd'
     }
   }
 }
