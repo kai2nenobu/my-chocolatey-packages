@@ -2,9 +2,6 @@ image: Visual Studio 2015
 version: 0.0.1.{build}
 
 environment:
-  MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
-  MYGET_API_KEY:
-    secure: Y/8UFTPxim7reHigg7iClTv5cu1QI4yA+zPs4DelBkFyMlUZxkzppJGkijKUuRVZ
   MINGW_ROOT: 'C:\MinGW'
   MSYS2_ROOT: 'C:\msys64'
 # Disable automatic builds
@@ -53,9 +50,13 @@ build_script:
 test_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
   - if exist test.bat .\test.bat
-deploy_script:
-  - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
-  - for %%p in (*.nupkg) do choco push -s "%MYGET_FEED%" -k "%MYGET_API_KEY%" %%p
+deploy:
+  provider: NuGet
+  server: 'https://www.myget.org/F/kai2nenobu'  # MyGet feed for myown
+  api_key:
+    secure: Y/8UFTPxim7reHigg7iClTv5cu1QI4yA+zPs4DelBkFyMlUZxkzppJGkijKUuRVZ
+  skip_symbols: true
+  artifact: /.*\.nupkg/
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
