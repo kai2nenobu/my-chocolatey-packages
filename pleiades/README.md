@@ -14,4 +14,4 @@ Current avaliable languages are `platform`/`java`.
 
 Pleiades is installed in `C:\tools\{{package-id}}`.
 
-If you want to install a 32bit version, use `--x86/--forcex86` option with `choco install`.
+These packages install 64bit eclipse only.
