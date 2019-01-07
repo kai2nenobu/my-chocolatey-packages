@@ -10,24 +10,24 @@ $Pleiades = @{
     Title='Pleiades All in One Platform'
     Tag=''
     standard=@{
-      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-32bit_20181004.zip'
-      Checksum='1c23d9a9e67b944ff526b67db704858c'
+      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2019/pleiades-2018-12-platform-win-64bit_20181224.zip'
+      Checksum='4907793b66f5c769019e21aa587f480a'
     }
     full=@{
-      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-platform-win-32bit-jre_20181004.zip'
-      Checksum='4d1ce8adc329dcfff645ea5ad0eb8461'
+      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2019/pleiades-2018-12-platform-win-64bit-jre_20181224.zip'
+      Checksum='d460d0cbc940fdb3a0067ea403b3d41a'
     }
   }
   java=@{
     Title='Pleiades All in One Java'
     Tag='java'
     standard=@{
-      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-32bit_20181004.zip'
-      Checksum='0be5a93235e2a192bdaa3705a1d2e001'
+      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2019/pleiades-2018-12-java-win-64bit_20181224.zip'
+      Checksum='1e1da779246066effa30725dfed436b0'
     }
     full=@{
-      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2018/pleiades-2018-09-java-win-32bit-jre_20181004.zip'
-      Checksum='ad8774957171ed38580467b8c563b0f5'
+      Url='http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2019/pleiades-2018-12-java-win-64bit-jre_20181224.zip'
+      Checksum='d672ba8b3c0ee6f8b08ee93cf95a061d'
     }
   }
 }
