@@ -18,9 +18,11 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 | [nkf](nkf)                                                                                           | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          |            2.1.4 | ✓              |
 | [pleiades](pleiades)-platform <br> pleiades-platform-full <br> pleiades-java <br> pleiades-java-full | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | 2018.12.20181224 |                |
 
+If you want to know the complete list, see https://www.myget.org/F/kai2nenobu/api/v3/query.
+
 # How to use
 
-Add an above feed to chocolatey source.
+Add an above feed to your chocolatey source.
 
 ```
 > choco source add -n kai2nenobu -s https://www.myget.org/F/kai2nenobu
