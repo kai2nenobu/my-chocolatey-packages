@@ -8,7 +8,8 @@ set GCC=%MINGW_ROOT%\bin\gcc
 set MAKE=%MINGW_ROOT%\bin\mingw32-make
 
 set NKF_DIR=nkf-2.1.5
-set NKF_URL=https://osdn.net/projects/nkf/downloads/64158/%NKF_DIR%.tar.gz/
+set BUILD_NO=70406
+set NKF_URL=https://osdn.net/projects/nkf/downloads/%BUILD_NO%/%NKF_DIR%.tar.gz/
 set ARCHIVE=%NKF_DIR%.tar.gz
 
 "%CURL%" -sSfL -o "%ARCHIVE%" "%NKF_URL%"
