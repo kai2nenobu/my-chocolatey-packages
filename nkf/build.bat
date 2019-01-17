@@ -7,7 +7,7 @@ set TAR=%MSYS2_ROOT%\usr\bin\tar
 set GCC=%MINGW_ROOT%\bin\gcc
 set MAKE=%MINGW_ROOT%\bin\mingw32-make
 
-set NKF_DIR=nkf-2.1.4
+set NKF_DIR=nkf-2.1.5
 set NKF_URL=https://osdn.net/projects/nkf/downloads/64158/%NKF_DIR%.tar.gz/
 set ARCHIVE=%NKF_DIR%.tar.gz
 
