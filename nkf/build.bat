@@ -12,7 +12,6 @@ set BUILD_NO=70406
 set NKF_URL=https://osdn.net/projects/nkf/downloads/%BUILD_NO%/%NKF_DIR%.tar.gz/
 set ARCHIVE=%NKF_DIR%.tar.gz
 
-"%CURL%" --version
 "%CURL%" --http1.1 -sSfL -o "%ARCHIVE%" "%NKF_URL%"
 if errorlevel 1 exit /b %ERRORLEVEL%
 
