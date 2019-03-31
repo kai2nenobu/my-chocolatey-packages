@@ -24,8 +24,6 @@ if errorlevel 1 exit /b %ERRORLEVEL%
 
 REM Copy executable to bin direcory
 cd ..\..\
-dir /S mozc\src\out_win\Release
-dir /S mozc\src\out_win\Release_x64
 mkdir Release
 mkdir Release_x64
 copy mozc\src\out_win\Release\mozc_emacs_helper.exe Release
