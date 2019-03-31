@@ -9,7 +9,7 @@ REM Install requirements
 choco install ninja --version 1.7.2 --yes
 
 REM Checkout source
-"%GIT_COMMAND%" clone "%MOZC_REPOSITORY" -b master --single-branch
+"%GIT_COMMAND%" clone "%MOZC_REPOSITORY%" -b master --single-branch
 cd mozc
 "%GIT_COMMAND%" checkout "%COMMIT_HASH%"
 "%GIT_COMMAND%" submodule update --init --recursive
