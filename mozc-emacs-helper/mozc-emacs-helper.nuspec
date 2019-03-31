@@ -28,6 +28,7 @@
 
   </metadata>
   <files>
+    <file src="tools\**" target="tools" />
     <file src="Release\**" target="Release" />
     <file src="Release_x64\**" target="Release_x64" />
   </files>
