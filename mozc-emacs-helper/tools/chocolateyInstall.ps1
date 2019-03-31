@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
 
 $packageName = $env:ChocolateyPackageName
 $location    = $env:ChocolateyPackageFolder
