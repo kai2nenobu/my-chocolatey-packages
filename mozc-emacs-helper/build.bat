@@ -1,5 +1,7 @@
 setlocal enabledelayedexpansion
 
+set GIT_COMMAND=C:\Program Files\Git\cmd\git
+
 set MOZC_REPOSITORY=https://github.com/google/mozc.git
 set COMMIT_HASH=afb03ddfe72dde4cf2409863a3bfea160f7a66d8
 
@@ -7,10 +9,10 @@ REM Install requirements
 choco install ninja --version 1.7.2 --yes
 
 REM Checkout source
-git clone "%MOZC_REPOSITORY" -b master --single-branch
+"%GIT_COMMAND%" clone "%MOZC_REPOSITORY" -b master --single-branch
 cd mozc
-git checkout "%COMMIT_HASH%"
-git submodule update --init --recursive
+"%GIT_COMMAND%" checkout "%COMMIT_HASH%"
+"%GIT_COMMAND%" submodule update --init --recursive
 
 REM Build mozc
 patch -p1 < ..\win32_build.patch
