@@ -12,4 +12,4 @@ if ($env:ChocolateyForceX86 -Or !$env:OS_IS64BIT) {
 ## Create a shim to mozc_emacs_helper.exe
 Install-BinFile `
   -Name mozc_emacs_helper `
-  -Path "${env:ChocolateyPackageFolder}\${$subDirectory}\mozc_emacs_helper.exe"
+  -Path "${env:ChocolateyPackageFolder}\${subDirectory}\mozc_emacs_helper.exe"
