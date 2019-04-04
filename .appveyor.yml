@@ -45,7 +45,14 @@ build_script:
   - if exist build.bat .\build.bat
   - if exist build.ps1 powershell -File .\build.ps1
   # Packaging
-  - if exist %PACKAGE_ID%.nuspec choco pack
+  - ps: |
+      if (Test-Path "${env:PACKAGE_ID}.nuspec") {
+        if ([string]::IsNullOrEmpty($env.PACKAGE_VERSION)) {
+          choco pack
+        } else {
+          choco pack --version $env.PACKAGE_VERSION
+        }
+      }
   - dir
 test_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
