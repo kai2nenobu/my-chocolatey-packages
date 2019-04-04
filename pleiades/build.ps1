@@ -69,6 +69,10 @@ foreach ($lang in $languages) {
         -replace '{{Checksum}}', $Pleiades[$lang][$ed].Checksum `
     } | Out-File $targetScript -Encoding UTF8
     ## Packaging
-    choco pack $targetNuspec
+    if ([string]::IsNullOrEmpty($env:PACKAGE_VERSION)) {
+      choco pack $targetNuspec
+    } else {
+      choco pack $targetNuspec --version $env:PACKAGE_VERSION
+    }
   }
 }
