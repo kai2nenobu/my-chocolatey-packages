@@ -47,10 +47,10 @@ build_script:
   # Packaging
   - ps: |
       if (Test-Path "${env:PACKAGE_ID}.nuspec") {
-        if ([string]::IsNullOrEmpty($env.PACKAGE_VERSION)) {
+        if ([string]::IsNullOrEmpty($env:PACKAGE_VERSION)) {
           choco pack
         } else {
-          choco pack --version $env.PACKAGE_VERSION
+          choco pack --version $env:PACKAGE_VERSION
         }
       }
   - dir
