@@ -3,7 +3,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mozc-emacs-helper</id>
-    <version>2.23.2815.100-pre</version>
+    <version>2.23.2815.100</version>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/mozc-emacs-helper</packageSourceUrl>
     <owners>Tsunenobu Kai</owners>
     <!-- ============================== -->
