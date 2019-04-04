@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>mozc-emacs-helper</id>
+    <version>2.23.2815.100</version>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/mozc-emacs-helper</packageSourceUrl>
+    <owners>Tsunenobu Kai</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Mozc Emacs Helper</title>
+    <authors>Google Inc.</authors>
+    <projectUrl>https://github.com/google/mozc</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/cmigemo.png</iconUrl>-->
+    <copyright>Google Inc.</copyright>
+    <licenseUrl>https://github.com/google/mozc/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/google/mozc</projectSourceUrl>
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/google/mozc/issues</bugTrackerUrl>
+    <tags>Google Japanese IME emacs</tags>
+    <summary>Helper program integrate emacs with mozc (Google Japanese Input)</summary>
+    <description>Helper program integrate emacs with mozc (Google Japanese Input)</description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="README.md" target="." />
+    <file src="Release\**" target="Release" />
+    <file src="Release_x64\**" target="Release_x64" />
+  </files>
+</package>
