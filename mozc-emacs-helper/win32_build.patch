@@ -1,0 +1,24 @@
+diff --git a/src/win32/build32/build32.gyp b/src/win32/build32/build32.gyp
+index 10651e6..b602df5 100644
+--- a/src/win32/build32/build32.gyp
++++ b/src/win32/build32/build32.gyp
+@@ -49,6 +49,7 @@
+             '../broker/broker.gyp:mozc_broker32',
+             '../ime/ime.gyp:mozc_ime',
+             '../tip/tip.gyp:mozc_tip32',
++            '../../unix/emacs/emacs.gyp:mozc_emacs_helper',
+           ],
+           'conditions': [
+             ['branding=="GoogleJapaneseInput"', {
+diff --git a/src/win32/build64/build64.gyp b/src/win32/build64/build64.gyp
+index 882d16a..123b609 100644
+--- a/src/win32/build64/build64.gyp
++++ b/src/win32/build64/build64.gyp
+@@ -46,6 +46,7 @@
+             '../broker/broker.gyp:mozc_broker64',
+             '../ime/ime.gyp:mozc_ime',
+             '../tip/tip.gyp:mozc_tip64',
++            '../../unix/emacs/emacs.gyp:mozc_emacs_helper',
+           ],
+           'conditions': [
+             ['branding=="GoogleJapaneseInput"', {
