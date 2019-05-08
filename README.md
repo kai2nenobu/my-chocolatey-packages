@@ -24,15 +24,16 @@ If you want to know the complete list, see https://www.myget.org/F/kai2nenobu/ap
 
 # How to use
 
-Add an above feed to your chocolatey source.
+Install a package with an above feed url.
 
 ```
-> choco source add -n kai2nenobu -s https://www.myget.org/F/kai2nenobu
+> choco install <package_id> --source https://www.myget.org/F/kai2nenobu
 ```
 
-Then you can install a package as usual as below.
+Or add an above feed to your chocolatey source and install a package.
 
 ```
+> choco source add --name kai2nenobu --source https://www.myget.org/F/kai2nenobu
 > choco install <package_id>
 ```
 
