@@ -1,7 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = $env:ChocolateyPackageName
-$packageVersion = '0.14.2'
 $location    = $env:ChocolateyPackageFolder
 
 $packageArgs = @{
