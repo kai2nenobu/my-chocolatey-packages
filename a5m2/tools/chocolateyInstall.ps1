@@ -20,6 +20,7 @@ Install-ChocolateyZipPackage `
   -Checksum $checksum `
   -Url64bit $url64 `
   -Checksum64 $checksum64 `
+  -ChecksumType 'sha256' `
   -UnzipLocation $unzipLocation
 
 # Prevent from generating shim for a5m2.exe
