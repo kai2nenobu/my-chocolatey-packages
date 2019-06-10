@@ -15,14 +15,14 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-    @{
-        "tools\chocolateyInstall.ps1" = @{
-          "(^\s*[$]url)\s*=.*" = "`${1} = '$($Latest.URL32)'"
-          "(^\s*[$]checksum)\s*=.*" = "`${1} = '$($Latest.Checksum32)'"
-          "(^\s*[$]url64)\s*=.*" = "`${1} = '$($Latest.URL64)'"
-          "(^\s*[$]checksum64)\s*=.*" = "`${1} = '$($Latest.Checksum64)'"
-        }
+  @{
+    "tools\chocolateyInstall.ps1" = @{
+      "(^\s*[$]url)\s*=.*" = "`${1} = '$($Latest.URL32)'"
+      "(^\s*[$]checksum)\s*=.*" = "`${1} = '$($Latest.Checksum32)'"
+      "(^\s*[$]url64)\s*=.*" = "`${1} = '$($Latest.URL64)'"
+      "(^\s*[$]checksum64)\s*=.*" = "`${1} = '$($Latest.Checksum64)'"
     }
+  }
 }
 
 $env:ChocolateyPackageName = 'a5m2'
