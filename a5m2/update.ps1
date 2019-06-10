@@ -27,4 +27,4 @@ function global:au_SearchReplace {
 
 $env:ChocolateyPackageName = 'a5m2'
 $env:ChocolateyPackageFolder = '.'
-Update-Package -NoReadme -Force
+Update-Package -NoReadme
