@@ -20,14 +20,14 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-    @{
-        "tools\chocolateyInstall.ps1" = @{
-          "(^\s*Url)\s*=.*" = "`${1} = '$($Latest.URL32)'"
-          "(^\s*Url64bit)\s*=.*" = "`${1} = '$($Latest.URL64)'"
-          "(^\s*Checksum)\s*=.*" = "`${1} = '$($Latest.Checksum32)'"
-          "(^\s*Checksum64)\s*=.*" = "`${1} = '$($Latest.Checksum64)'"
-        }
+  @{
+    "tools\chocolateyInstall.ps1" = @{
+      "(^\s*Url)\s*=.*" = "`${1} = '$($Latest.URL32)'"
+      "(^\s*Url64bit)\s*=.*" = "`${1} = '$($Latest.URL64)'"
+      "(^\s*Checksum)\s*=.*" = "`${1} = '$($Latest.Checksum32)'"
+      "(^\s*Checksum64)\s*=.*" = "`${1} = '$($Latest.Checksum64)'"
     }
+  }
 }
 
 Update-Package -NoReadme
