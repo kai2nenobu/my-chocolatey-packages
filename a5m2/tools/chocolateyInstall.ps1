@@ -1,11 +1,11 @@
-$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = $env:ChocolateyPackageName
 $unzipLocation = Join-Path $env:ChocolateyPackageFolder 'a5m2'
-$url         = 'http://a5m2.mmatsubara.com/download/a5m2_2.12.2_x86.zip'
-$checksum    = '5b57d689b09c862e45c0a5ccd566074e'
-$url64       = 'http://a5m2.mmatsubara.com/download/a5m2_2.12.2_x64.zip'
-$checksum64  = '75522e39cad228d873232959efd461ff'
+$url = 'https://a5m2.mmatsubara.com/download/a5m2_2.14.1_x86.zip'
+$checksum = 'a3dd4b30d9682f7b279508153d3f4a28c8e976f2f41eff88b9a1bc33ad00a4ad'
+$url64 = 'https://a5m2.mmatsubara.com/download/a5m2_2.14.1_x64.zip'
+$checksum64 = 'd3eab7097c950f0a555b1724e8812e9329dcc0c2cf0fa896e72b83c8ceea19e0'
 
 # if ($env:ChocolateyForceX86 -Or !$env:OS_IS64BIT) {
 #   $subDirectory = 'cmigemo-default-win32'
