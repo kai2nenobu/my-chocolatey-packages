@@ -59,6 +59,8 @@ build_script:
 - ps: |
     $ErrorActionPreference = 'Continue'
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
+    ## Disable package push when build on pull request
+    if ([string]::IsNullOrEmpty($Env:APPVEYOR_PULL_REQUEST_HEAD_COMMIT)) { $Env:au_push = 'false' }
     if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
         switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
         {
