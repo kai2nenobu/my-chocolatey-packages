@@ -14,6 +14,7 @@ environment:
   # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
   au_version: '2019.5.22'
   au_push: true
+  au_pushurl: https://www.myget.org/F/kai2nenobu # Where to push packages
   # Force test: use 1 to test all, or N to split testing into N groups
   au_test_groups: 1
 
