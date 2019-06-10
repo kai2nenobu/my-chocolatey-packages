@@ -18,8 +18,8 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 | [mape](mape)                                                                                         | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)             |         1.0.21.0 |                 |              |
 | [mozc-emacs-helper](mozc-emacs-helper)                                                               | [Mozc Emacs Helper](https://github.com/google/mozc/tree/master/src/unix/emacs)         |    2.23.2815.100 | ✓               |              |
 | [nkf](nkf)                                                                                           | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          |            2.1.5 | ✓               |              |
-| [pleiades-java](pleiades-java)                                                                       | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | 2019.03.20190324 |                 |              |
-| [pleiades-java-full](pleiades-java-full)                                                             | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | 2019.03.20190324 |                 |              |
+| [pleiades-java](pleiades-java)                                                                       | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [See here](https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java) |                 | ✓            |
+| [pleiades-java-full](pleiades-java-full)                                                             | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [See here](https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java-full) |                 | ✓            |
 
 If you want to know the complete list, see https://www.myget.org/F/kai2nenobu/api/v3/query.
 
