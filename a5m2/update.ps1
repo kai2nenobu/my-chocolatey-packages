@@ -1,12 +1,15 @@
 Import-Module au
 
 function global:au_GetLatest {
-  ## Find a latest release and extract zip URL from a5m2 Home Page
-  $linkRegex = [regex]'download/a5m2_([^_]*)_x64_r\.zip'
+  ## Find a latest version from a5m2 history page
+  $versionRegex = [regex]'(?i)^(?:\xef\xbb\xbf)?version\s*(\d+\.\d+\.\d+)' # Allow beginning BOM
   $homepage = 'https://a5m2.mmatsubara.com/'
-  $body = Invoke-WebRequest -Uri $homepage -UseBasicParsing
-  $link = $body.Links | Where-Object { $_.href -match $linkRegex } | Select-Object -First 1 -Expand href
-  $version = $linkRegex.Match($link).Groups[1]
+  $latestLine = Invoke-WebRequest -Uri ($homepage + 'document/history.txt') -UseBasicParsing `
+    | Select-Object -ExpandProperty Content `
+    | % { $_ -split '\r?\n'  } `
+    | ? { $_ -match  $versionRegex } `
+    | select -First 1
+  $version = $versionRegex.Match($latestLine).Groups[1]
   return @{
     Version = $version
     URL32 = "{0}download/a5m2_{1}_x86.zip" -f $homepage,$version
