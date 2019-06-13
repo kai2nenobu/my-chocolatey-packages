@@ -14,6 +14,7 @@ Install-ChocolateyZipPackage `
   -PackageName $packageName `
   -Url $url `
   -Checksum $checksum `
+  -ChecksumType 'sha256' `
   -UnzipLocation $location
 
 ## Create a shortcut for GUI program in Common Programs Location
