@@ -1,5 +1,7 @@
 *.nupkg
 *.zip
+*.7z
+*.exe
 *.msi
 bin/
 
