@@ -16,6 +16,7 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 | [cmigemo](cmigemo)                       | [C/Migemo](https://github.com/koron/cmigemo)                                           | [![cmigemo version][cmigemo_version]][cmigemo_package]                                  |           |              |
 | [cpdf-cr](cpdf-cr)                       | [Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/) | [![cpdf-cr version][cpdf-cr_version]][cpdf-cr_package]                                  |           |              |
 | [mape](mape)                             | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)             | [![mape version][mape_version]][mape_package]                                           |           | ✓            |
+| [ghq](ghq)                               | [ghq](https://github.com/motemen/ghq)                                                  | [![ghq version][ghq_version]][ghq_package]                                              | ✓         | ✓            |
 | [mozc-emacs-helper](mozc-emacs-helper)   | [Mozc Emacs Helper](https://github.com/google/mozc/tree/master/src/unix/emacs)         | [![mozc-emacs-helper version][mozc-emacs-helper_version]][mozc-emacs-helper_package]    | ✓         |              |
 | [nkf](nkf)                               | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          | [![nkf version][nkf_version]][nkf_package]                                              | ✓         |              |
 | [pleiades-java](pleiades-java)           | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java version][pleiades-java_version]][pleiades-java_package]                |           | ✓            |
@@ -31,6 +32,8 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 [cmigemo_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/cmigemo
 [cpdf-cr_version]: https://img.shields.io/myget/kai2nenobu/v/cpdf-cr.svg?label=myget
 [cpdf-cr_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/cpdf-cr
+[ghq_version]: https://img.shields.io/myget/kai2nenobu/v/ghq.svg?label=myget
+[ghq_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/ghq
 [mape_version]: https://img.shields.io/myget/kai2nenobu/v/mape.svg?label=myget
 [mape_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/mape
 [mozc-emacs-helper_version]: https://img.shields.io/myget/kai2nenobu/v/mozc-emacs-helper.svg?label=myget
