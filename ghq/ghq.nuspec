@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>ghq</id>
     <title>ghq</title>
-    <version>0.12.5</version>
+    <version>0.12.6</version>
     <authors>motemen</authors>
     <owners>kai2nenobu</owners>
     <summary>Manage remote repository clones</summary>
