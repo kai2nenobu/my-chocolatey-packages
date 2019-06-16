@@ -21,6 +21,7 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 | [nkf](nkf)                               | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          | [![nkf version][nkf_version]][nkf_package]                                              | ✓         |              |
 | [pleiades-java](pleiades-java)           | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java version][pleiades-java_version]][pleiades-java_package]                |           | ✓            |
 | [pleiades-java-full](pleiades-java-full) | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java-full version][pleiades-java-full_version]][pleiades-java-full_package] |           | ✓            |
+| [ssh-agent-wsl](ssh-agent-wsl)           | [ssh-agent-wsl](https://github.com/rupor-github/ssh-agent-wsl)                         | [![ssh-agent-wsl version][ssh-agent-wsl_version]][ssh-agent-wsl_package]                | ✓         | ✓            |
 
 [a5m2_version]: https://img.shields.io/myget/kai2nenobu/v/a5m2.svg?label=myget
 [a5m2_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/a5m2
@@ -44,6 +45,8 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 [pleiades-java_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java
 [pleiades-java-full_version]: https://img.shields.io/myget/kai2nenobu/v/pleiades-java-full.svg?label=myget
 [pleiades-java-full_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java-full
+[ssh-agent-wsl_version]: https://img.shields.io/myget/kai2nenobu/v/ssh-agent-wsl.svg?label=myget
+[ssh-agent-wsl_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/ssh-agent-wsl
 
 If you want to know the complete list, see https://www.myget.org/F/kai2nenobu/api/v3/query.
 
