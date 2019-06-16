@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ssh-agent-wsl</id>
+    <title>ssh-agent-wsl</title>
+    <version>2.2</version>
+    <authors>rupor-github</authors>
+    <owners>kai2nenobu</owners>
+    <summary>An ssh-agent compatible helper for interacting with Windows ssh-agent service from processes running on the Windows Subsystem for Linux (WSL).</summary>
+    <description>Since Windows April update official OpenSSH port exited beta (and it has been available for a long time). It has very convenient ssh-agent service (with support for persistence and Windows security). Unfortunately it is not accessible from WSL. This project aims to correct this situation by enabling access to SSH keys held by Windows own ssh-agent service from inside the Windows Subsystem or Linux.</description>
+    <projectUrl>https://github.com/rupor-github/ssh-agent-wsl</projectUrl>
+    <tags>ssh wsl</tags>
+    <copyright>rupor-github</copyright>
+    <licenseUrl>https://github.com/rupor-github/ssh-agent-wsl/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+    <releaseNotes></releaseNotes>
+    <docsUrl>https://github.com/rupor-github/ssh-agent-wsl/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/rupor-github/ssh-agent-wsl/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/rupor-github/ssh-agent-wsl</projectSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/ssh-agent-wsl</packageSourceUrl>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
