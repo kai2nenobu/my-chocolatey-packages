@@ -19,6 +19,7 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 | [ghq](ghq)                               | [ghq](https://github.com/motemen/ghq)                                                  | [![ghq version][ghq_version]][ghq_package]                                              | ✓         | ✓            |
 | [mozc-emacs-helper](mozc-emacs-helper)   | [Mozc Emacs Helper](https://github.com/google/mozc/tree/master/src/unix/emacs)         | [![mozc-emacs-helper version][mozc-emacs-helper_version]][mozc-emacs-helper_package]    | ✓         |              |
 | [nkf](nkf)                               | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          | [![nkf version][nkf_version]][nkf_package]                                              | ✓         |              |
+| [pet](pet)                               | [pet : CLI Snippet Manager](https://github.com/knqyf263/pet)                           | [![pet version][pet_version]][pet_package]                                              | ✓         | ✓            |
 | [pleiades-java](pleiades-java)           | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java version][pleiades-java_version]][pleiades-java_package]                |           | ✓            |
 | [pleiades-java-full](pleiades-java-full) | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java-full version][pleiades-java-full_version]][pleiades-java-full_package] |           | ✓            |
 | [ssh-agent-wsl](ssh-agent-wsl)           | [ssh-agent-wsl](https://github.com/rupor-github/ssh-agent-wsl)                         | [![ssh-agent-wsl version][ssh-agent-wsl_version]][ssh-agent-wsl_package]                | ✓         | ✓            |
@@ -41,6 +42,8 @@ These packages are built on [AppVeyor](https://www.appveyor.com/) automatically 
 [mozc-emacs-helper_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/mozc-emacs-helper
 [nkf_version]: https://img.shields.io/myget/kai2nenobu/v/nkf.svg?label=myget
 [nkf_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/nkf
+[pet_version]: https://img.shields.io/myget/kai2nenobu/v/pet.svg?label=myget
+[pet_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pet
 [pleiades-java_version]: https://img.shields.io/myget/kai2nenobu/v/pleiades-java.svg?label=myget
 [pleiades-java_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java
 [pleiades-java-full_version]: https://img.shields.io/myget/kai2nenobu/v/pleiades-java-full.svg?label=myget
