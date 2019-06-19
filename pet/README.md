@@ -1,6 +1,6 @@
 # <img src="https://cdn.jsdelivr.net/gh/knqyf263/pet/doc/logo.png" width="48" height="48"/> [![pet version][pet_version]][pet_package]
 
-[pet_version]: https://img.shields.io/myget/kai2nenobu/v/pet.svg
+[pet_version]: https://img.shields.io/myget/kai2nenobu/v/pet.svg?label=pet
 [pet_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pet
 
 `pet` is written in Go, and therefore you can just grab the binary releases and drop it in your $PATH.
