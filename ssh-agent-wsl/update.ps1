@@ -6,7 +6,7 @@ function global:au_GetLatest {
   $releases_info = Invoke-RestMethod -Uri $releases
   foreach ($release in $releases_info) {
     if (-not $release.prerelease) {
-      $version = $release.tag_name
+      $version = $release.tag_name -replace "^v",""
       $url64 = $release.assets | Where-Object { $_.name -eq "ssh-agent-wsl.7z" } | Select-Object -First 1 -Expand browser_download_url
       return @{
         Version = $version
