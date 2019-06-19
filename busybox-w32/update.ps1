@@ -25,6 +25,12 @@ function global:au_BeforeUpdate() {
 function global:au_SearchReplace {
   ## Nothing to replace
   @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
+      "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
+      "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
+      "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
+    }
   }
 }
 

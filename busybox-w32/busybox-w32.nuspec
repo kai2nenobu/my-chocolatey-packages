@@ -37,6 +37,7 @@ See https://github.com/rmyorston/busybox-w32/blob/master/README.md
 
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
     <file src="README.md" target="." />
   </files>
