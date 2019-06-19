@@ -4,7 +4,8 @@
 
 This repository stores chocolatey packages for my own.
 
-These packages are built on [AppVeyor](https://www.appveyor.com/) automatically and stored in [MyGet public feed](https://www.myget.org/F/kai2nenobu).
+These packages are built on [AppVeyor](https://www.appveyor.com/) and stored in [MyGet public feed](https://www.myget.org/F/kai2nenobu).
+Some packages are automatically updated by using [AU](https://gist.github.com/kai2nenobu/4df33f42a891ced2fe169974fd3d58ec). ([Update Report](https://gist.github.com/kai2nenobu/4df33f42a891ced2fe169974fd3d58ec))
 
 # Package List
 
