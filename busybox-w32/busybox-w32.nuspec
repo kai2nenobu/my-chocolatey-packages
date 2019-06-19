@@ -11,7 +11,7 @@
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>WIN32 native port of BusyBox.</title>
+    <title>WIN32 native port of BusyBox</title>
     <authors>See https://github.com/rmyorston/busybox-w32/blob/master/AUTHORS</authors>
     <projectUrl>https://frippery.org/busybox/</projectUrl>
     <!-- <iconUrl></iconUrl> -->
