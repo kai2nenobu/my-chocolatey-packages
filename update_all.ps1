@@ -73,7 +73,7 @@ $Options = [ordered]@{
 
     Slack = @{
       WebHookUrl = $Env:slack_webhook_url
-      BuildUrl = 'https://ci.appveyor.com/project/{0}/{1}/builds/{2}' -f $env:APPVEYOR_ACCOUNT_NAME,$env:APPVEYOR_PROJECT_SLUG,$env:APPVEYOR_PROJECT_SLUG
+      BuildUrl = 'https://ci.appveyor.com/project/{0}/{1}/builds/{2}' -f $env:APPVEYOR_ACCOUNT_NAME,$env:APPVEYOR_PROJECT_SLUG,$env:APPVEYOR_BUILD_ID
     }
 
     RunInfo = @{
