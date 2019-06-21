@@ -12,7 +12,7 @@ $Options = [ordered]@{
     Threads       = 10                                      #Number of background jobs to use
     Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
     PushAll       = $true                                   #Allow to push multiple packages at once
-    PluginPath    = ''                                      #Path to user plugins
+    PluginPath    = '_au_plugins'                                      #Path to user plugins
     IgnoreOn      = @(                                      #Error message parts to set the package ignore status
       'Could not create SSL/TLS secure channel'
       'Could not establish trust relationship'
@@ -69,6 +69,11 @@ $Options = [ordered]@{
     GitReleases  = @{
         ApiToken    = $Env:github_api_key                   #Your github api key
         ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
+    }
+
+    Slack = @{
+      WebHookUrl = $Env:slack_incoming_webhook
+      BuildUrl = 'https://ci.appveyor.com/project/{0}/{1}/builds/{2}' -f $env:APPVEYOR_ACCOUNT_NAME,$env:APPVEYOR_PROJECT_SLUG,$env:APPVEYOR_PROJECT_SLUG
     }
 
     RunInfo = @{
