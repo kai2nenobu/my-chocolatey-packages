@@ -21,7 +21,11 @@ param(
   [string]$MessageFormat = "[Update Status:{0} packages. {1} updated, {2} Published, {3} Failed]`n{4}"
 )
 
-if (!$WebHookUrl) { return } # If we don't have a webhookurl we can't push status messages, so ignore.
+if (!$WebHookUrl) {
+  # If we don't have a webhookurl we can't push status messages, so ignore.
+  Write-Host "No WebHookUrl is specified, skipping"
+  return
+}
 
 $updatedPackages   = @($Info.result.updated).Count
 $publishedPackages = @($Info.result.pushed).Count
