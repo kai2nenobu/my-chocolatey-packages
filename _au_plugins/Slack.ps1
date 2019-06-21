@@ -18,7 +18,7 @@ param(
   $Info,
   [string]$WebHookUrl,
   [string]$BuildUrl = '',
-  [string]$MessageFormat = "[Update Status:{0} packages. {1} updated, {2} Published, {3} Failed]`n{4}"
+  [string]$MessageFormat = "[Update Status:{0} packages. {1} Updated, {2} Published, {3} Failed]`n{4}"
 )
 
 if (!$WebHookUrl) {
