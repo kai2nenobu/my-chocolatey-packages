@@ -3,11 +3,11 @@
   <metadata>
     <id>pet</id>
     <title>pet : CLI Snippet Manager</title>
-    <version>0.3.4</version>
+    <version>0.3.5</version>
     <authors>Teppei Fukuda</authors>
     <owners>kai2nenobu</owners>
     <summary>Simple command-line snippet manager, written in Go.</summary>
-    <description><![CDATA[[pet_version]: https://img.shields.io/myget/kai2nenobu/v/pet.svg
+    <description><![CDATA[[pet_version]: https://img.shields.io/myget/kai2nenobu/v/pet.svg?label=pet
 [pet_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pet
 
 `pet` is written in Go, and therefore you can just grab the binary releases and drop it in your $PATH.
