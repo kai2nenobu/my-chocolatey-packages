@@ -39,7 +39,7 @@ $message     = ($MessageFormat -f $packageCount, $updatedPackages, $publishedPac
 $color = if ($failedPackages -gt 0) { 'danger' }
          elseif ($publishedPackages -gt 0) { 'good' }
          elseif ($ignoredPackages -gt 0) { 'warning' }
-         else { '#00ffff' }
+         else { '#00b4ff' }
 
 $body = @{
   color = $color
