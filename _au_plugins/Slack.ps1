@@ -54,5 +54,5 @@ $arguments = @{
 }
 
 "Submitting message to slack"
-Invoke-RestMethod @arguments
+Invoke-RestMethod @arguments > $null
 "Message submitted to slack"
