@@ -29,15 +29,20 @@ if (!$WebHookUrl) {
 
 $updatedPackages   = @($Info.result.updated).Count
 $publishedPackages = @($Info.result.pushed).Count
+$ignoredPackages = @($Info.result.ignored).Count
 $failedPackages    = $Info.error_count.total
 $gistUrl           = $Info.plugin_results.Gist -split '\n' | select -Last 1
 $packageCount      = $Info.result.all.Length
 
 $messageHeader = if ($BuildUrl) { "<$BuildUrl|Update AU Packages>" } else { 'Update AU Packages' }
 $message     = ($MessageFormat -f $packageCount, $updatedPackages, $publishedPackages, $failedPackages, $gistUrl)
+$color = if ($failedPackages -gt 0) { 'danger' }
+         else if ($publishedPackages -gt 0) { 'good' }
+         else if ($ignoredPackages -gt 0) { 'warning' }
+         else { '#00ffff' }
 
 $body = @{
-  color = if ($failedPackages -gt 0) { 'danger' } else { 'good' }
+  color = $color
   fields = @(
     @{
       value = "{0}`n{1}" -f $messageHeader,$message
