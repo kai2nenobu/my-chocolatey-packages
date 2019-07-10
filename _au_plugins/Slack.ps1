@@ -37,8 +37,8 @@ $packageCount      = $Info.result.all.Length
 $messageHeader = if ($BuildUrl) { "<$BuildUrl|Update AU Packages>" } else { 'Update AU Packages' }
 $message     = ($MessageFormat -f $packageCount, $updatedPackages, $publishedPackages, $failedPackages, $gistUrl)
 $color = if ($failedPackages -gt 0) { 'danger' }
-         else if ($publishedPackages -gt 0) { 'good' }
-         else if ($ignoredPackages -gt 0) { 'warning' }
+         elseif ($publishedPackages -gt 0) { 'good' }
+         elseif ($ignoredPackages -gt 0) { 'warning' }
          else { '#00ffff' }
 
 $body = @{
