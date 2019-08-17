@@ -3,7 +3,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>busybox-w32</id>
-    <version>1.31.0.3128</version>
+    <version>1.32.0.3244</version>
     <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/busybox-w32</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>kai2nenobu</owners>
