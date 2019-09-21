@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gibo</id>
+    <title>fast access to .gitignore boilerplates</title>
+    <version>2.2.1</version>
+    <authors>Simon Whitaker</authors>
+    <owners>kai2nenobu</owners>
+    <summary>gibo (short for .gitignore boilerplates) is a shell script to help you easily access .gitignore boilerplates from github.com/github/gitignore.</summary>
+    <description><![CDATA[[gibo_version]: https://img.shields.io/myget/kai2nenobu/v/gibo.svg?label=gibo
+[gibo_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/gibo
+
+[gibo](https://github.com/simonwhitaker/gibo) (short for .gitignore boilerplates) is a shell script to help you easily access .gitignore boilerplates from github.com/github/gitignore
+
+## Typical usage
+
+```console
+$ gibo dump Swift Xcode >> .gitignore
+```
+
+For additional usage instructions, run `gibo help`.
+
+## Notes
+
+This package installs both shell script gibo (`gibo`) and batch script gibo (`gibo.bat`).
+They are placed on `%ChocolateyInstall%\bin` and are included in your `PATH` environment variable.
+If you have a bash shell (like `Git Bash`, `MSYS2`), you can execute `gibo` shell script.
+
+A version of `gibo.bat` may differ a version of `gibo` because its functionality is a bit different from `gibo`.
+]]></description>
+    <projectUrl>https://github.com/simonwhitaker/gibo</projectUrl>
+    <tags>git gitignore</tags>
+    <copyright></copyright>
+    <licenseUrl>https://github.com/simonwhitaker/gibo/blob/master/UNLICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+    <releaseNotes></releaseNotes>
+    <docsUrl>https://github.com/simonwhitaker/gibo/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/simonwhitaker/gibo/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/simonwhitaker/gibo</projectSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/gibo</packageSourceUrl>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+    <file src="README.md" target="." />
+  </files>
+</package>
