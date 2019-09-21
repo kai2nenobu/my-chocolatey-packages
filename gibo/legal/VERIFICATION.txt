@@ -7,15 +7,15 @@ Package can be verified like this:
 
 1. Go to
 
-   url: https://github.com/simonwhitaker/gibo/archive/2.2.1.zip
+   url: https://github.com/simonwhitaker/gibo/archive/2.2.3.zip
 
    to download the installer.
 
-2. You can use one of the following methods to obtain the SHA256 checksum:
+2. You can use one of the following methods to obtain the SHA256 checksum: E629F356128E48CC79912123E234BA3A508BAED48CC64A7D8C6A50D2D3B8DF31
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: A0E38A415E99E72E6C4241E46ECD3BD57E91C7C4DE6F8993F3DCB5D574D3E1E3
+   checksum: E629F356128E48CC79912123E234BA3A508BAED48CC64A7D8C6A50D2D3B8DF31
 
 Using AU:
 
