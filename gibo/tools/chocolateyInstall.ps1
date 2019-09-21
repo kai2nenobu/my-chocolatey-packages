@@ -7,13 +7,10 @@ ls $toolsPath\* | ? { $_.PSISContainer } | rm -Recurse -Force #remove older pack
 # Expand .zip
 $packageArgs = @{
     PackageName    = 'gibo'
-    FileFullPath   = Get-Item "$toolsPath\gibo-*.zip"
+    FileFullPath   = Get-Item "$toolsPath\*.zip"
     Destination    = $toolsPath
 }
 Get-ChocolateyUnzip @packageArgs
-
-# Remove .zip
-rm $toolsPath\*.zip -ea 0
 
 # Create a shim to gibo.bat
 $bat = @(Get-ChildItem -LiteralPath $toolsPath -Filter gibo.bat -Recurse -Force)
