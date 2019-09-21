@@ -22,8 +22,8 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_SearchReplace {
    @{
         ".\legal\VERIFICATION.txt" = @{
-          "(?i)(\s+url:).*"            = "`${1} $($Latest.URL32)"
-          "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
+          "(?i)(^\s+url:).*"            = "`${1} $($Latest.URL32)"
+          "(?i)(^\s+checksum:).*"        = "`${1} $($Latest.Checksum32)"
         }
     }
 }
