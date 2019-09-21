@@ -9,11 +9,9 @@ function global:au_GetLatest {
     if (-not $release.prerelease) {
       $version = $release.tag_name -replace "^v",""
       $url64 = $release.assets | Where-Object { $_.name -like "AWS_SAM_CLI_64*.msi" } | Select-Object -First 1 -Expand browser_download_url
-      $url32 = $release.assets | Where-Object { $_.name -like "AWS_SAM_CLI_32*.msi" } | Select-Object -First 1 -Expand browser_download_url
       return @{
         Version = $version
         URL64 = $url64
-        URL32 = $url32
       }
     }
   }
@@ -22,12 +20,10 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
   @{
     "tools\chocolateyInstall.ps1" = @{
-      "(^\s*Url)\s*=.*" = "`${1} = '$($Latest.URL32)'"
       "(^\s*Url64bit)\s*=.*" = "`${1} = '$($Latest.URL64)'"
-      "(^\s*Checksum)\s*=.*" = "`${1} = '$($Latest.Checksum32)'"
       "(^\s*Checksum64)\s*=.*" = "`${1} = '$($Latest.Checksum64)'"
     }
   }
 }
 
-Update-Package -NoReadme
+Update-Package -ChecksumFor 64 -NoReadme
