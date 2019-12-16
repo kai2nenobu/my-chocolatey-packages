@@ -1,5 +1,3 @@
-[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/1vv03ri8bujes620/branch/master?svg=true)](https://ci.appveyor.com/project/kai2nenobu/chocolatey-packages/branch/master)
-
 # What is this repository?
 
 This repository stores chocolatey packages for my own.

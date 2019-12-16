@@ -38,7 +38,7 @@ A version of `gibo.bat` may differ a version of `gibo` because its functionality
     <docsUrl>https://github.com/simonwhitaker/gibo/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/simonwhitaker/gibo/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/simonwhitaker/gibo</projectSourceUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/gibo</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/gibo</packageSourceUrl>
     <dependencies></dependencies>
   </metadata>
   <files>

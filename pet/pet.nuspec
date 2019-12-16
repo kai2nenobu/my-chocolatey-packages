@@ -48,7 +48,7 @@ So I made it possible to register snippets with description and search them easi
     <docsUrl>https://github.com/knqyf263/pet/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/knqyf263/pet/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/knqyf263/pet</projectSourceUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/pet</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/pet</packageSourceUrl>
     <dependencies></dependencies>
   </metadata>
   <files>
