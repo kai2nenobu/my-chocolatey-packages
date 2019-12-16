@@ -18,7 +18,7 @@
     <docsUrl>https://github.com/rupor-github/ssh-agent-wsl/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/rupor-github/ssh-agent-wsl/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/rupor-github/ssh-agent-wsl</projectSourceUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/ssh-agent-wsl</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/ssh-agent-wsl</packageSourceUrl>
     <dependencies></dependencies>
   </metadata>
   <files>

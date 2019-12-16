@@ -18,7 +18,7 @@
     <docsUrl>https://github.com/motemen/ghq/blob/master/README.adoc</docsUrl>
     <bugTrackerUrl>https://github.com/motemen/ghq/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/motemen/ghq</projectSourceUrl>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/ghq</packageSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/ghq</packageSourceUrl>
     <dependencies></dependencies>
   </metadata>
   <files>
