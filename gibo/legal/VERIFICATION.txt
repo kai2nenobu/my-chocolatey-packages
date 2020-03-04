@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   url: https://github.com/simonwhitaker/gibo/archive/2.2.3.zip
+   url: https://github.com/simonwhitaker/gibo/archive/2.2.4.zip
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum: E629F356128E48CC79912123E234BA3A508BAED48CC64A7D8C6A50D2D3B8DF31
+   checksum: 4669227C5EC61DC1D60C373F11656DAD30F9CF5D9D402129FC883165DCEE9AFC
 
 Using AU:
 
