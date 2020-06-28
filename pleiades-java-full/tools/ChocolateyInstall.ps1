@@ -2,8 +2,8 @@
 
 $packageName = $env:ChocolateyPackageName
 $installPath = Join-Path (Get-ToolsLocation) $packageName
-$url = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2020/pleiades-2020-03-java-win-64bit-jre_20200322.zip'
-$checksum = '0c3b2c9896dcb2a317d618fd3bff5937'
+$url = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2020/pleiades-2020-06-java-win-64bit-jre_20200628.zip'
+$checksum = 'fb556045a821d79f006ffbf88a846424'
 $checksumType = 'md5'
 
 ## Download and install pleaides in a tools directory (Typically "C:\tools")

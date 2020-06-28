@@ -3,7 +3,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pleiades-java-full</id>
-    <version>2020.03.20200322</version>
+    <version>2020.06.20200628</version>
     <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/tree/master/pleiades</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>kai2nenobu</owners>
