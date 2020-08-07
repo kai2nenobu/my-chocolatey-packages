@@ -37,6 +37,7 @@ jobs:
         run: |
           Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version
           $PSVersionTable
+          [Net.ServicePointManager]::SecurityProtocol
           git --version
           choco --version
       - name: Initialize Git config
