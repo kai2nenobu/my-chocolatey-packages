@@ -37,7 +37,6 @@ jobs:
         run: |
           Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version
           $PSVersionTable
-          [Net.ServicePointManager]::SecurityProtocol
           git --version
           choco --version
       - name: Initialize Git config
@@ -51,7 +50,6 @@ jobs:
           . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
       - name: Check update for packages
         run: |
-          [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
           $ErrorActionPreference = 'Continue'
           ./update_all.ps1 -ForcedPackages $forced
           7z a au_temp.zip $Env:TEMP\chocolatey\au\*
