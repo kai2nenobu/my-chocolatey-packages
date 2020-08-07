@@ -1,0 +1,17 @@
+name: Auto Update
+
+on:
+  push:
+    branch: [gh_actions]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: Write-Host "Hello, world!"
+      - name: Run a multi-line script
+        run: |
+          "This is"
+          Write-Host "multi-line script"
