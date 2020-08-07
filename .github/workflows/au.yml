@@ -5,7 +5,7 @@ on:
     branch: [gh_actions]
 
 env:
-  au_version: '2019.5.22'
+  au_version: pwsh7
   au_push: true
   au_pushurl: https://www.myget.org/F/kai2nenobu # Where to push packages
   # Github token to commit pushed packages to repository
@@ -47,7 +47,7 @@ jobs:
           git config --global core.safecrlf false
       - name: Install AU
         run: |
-          git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
+          git clone -q https://github.com/kai2nenobu/au.git $Env:TEMP/au
           . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
       - name: Check update for packages
         run: |
