@@ -4,30 +4,6 @@ on:
   push:
     branch: [gh_actions]
 
-env:
-  au_version: pwsh7
-  au_push: false
-  au_pushurl: https://www.myget.org/F/kai2nenobu # Where to push packages
-  # Github token to commit pushed packages to repository
-  github_user_repo: kai2nenobu/my-chocolatey-packages
-  github_api_key: secret
-
-  # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
-  # Optional, leave empty to create anonymous gist
-  gist_id: 4df33f42a891ced2fe169974fd3d58ec
-
-  # Force test: gist id for test results
-  gist_id_test:
-
-  # Chocolatey API key - to push updated packages
-  api_key: secret
-
-  # Slack webhook URL
-  slack_webhook_url: secret
-
-  # AppVeyor build url which points to this build
-  APPVEYOR_BUILD_URL: https://test.example.com
-
 jobs:
   build:
     runs-on: windows-2019
@@ -48,11 +24,35 @@ jobs:
         run: |
           git clone -q https://github.com/kai2nenobu/au.git $Env:TEMP/au
           . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
+        env:
+          au_version: pwsh7
       - name: Check update for packages
         run: |
           $ErrorActionPreference = 'Continue'
           ./update_all.ps1 -ForcedPackages $forced
           7z a au_temp.zip $Env:TEMP\chocolatey\au\*
+        env:
+          au_push: false
+          au_pushurl: https://www.myget.org/F/kai2nenobu # Where to push packages
+          # Github token to commit pushed packages to repository
+          github_user_repo: kai2nenobu/my-chocolatey-packages
+          github_api_key: secret
+
+          # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
+          # Optional, leave empty to create anonymous gist
+          gist_id: 4df33f42a891ced2fe169974fd3d58ec
+
+          # Force test: gist id for test results
+          gist_id_test:
+
+          # Chocolatey API key - to push updated packages
+          api_key: secret
+
+          # Slack webhook URL
+          slack_webhook_url: secret
+
+          # AppVeyor build url which points to this build
+          APPVEYOR_BUILD_URL: https://test.example.com
       - name: Upload update results
         uses: actions/upload-artifact@v2
         with:
