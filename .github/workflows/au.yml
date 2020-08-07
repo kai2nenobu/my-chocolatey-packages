@@ -36,7 +36,7 @@ jobs:
           au_push: true
           au_pushurl: https://www.myget.org/F/kai2nenobu # Where to push packages
           # Github token to commit pushed packages to repository
-          github_user_repo: ${{ env.GITHUB_REPOSITORY }}
+          github_user_repo: ${{ github.repository }}
           github_api_key: ${{ secrets.AU_GITHUB_API_KEY }}
 
           # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
@@ -53,7 +53,7 @@ jobs:
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
 
           # AppVeyor build url which points to this build
-          APPVEYOR_BUILD_URL: https://github.com/${{ env.GITHUB_REPOSITORY }}/actions/runs/${{ env.GITHUB_RUN_ID }}
+          APPVEYOR_BUILD_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
       - name: Upload update results
         uses: actions/upload-artifact@v2
         with:
