@@ -55,3 +55,11 @@ jobs:
           $ErrorActionPreference = 'Continue'
           ./update_all.ps1 -ForcedPackages $forced
           7z a au_temp.zip $Env:TEMP\chocolatey\au\*
+      - name: Upload update results
+        uses: actions/upload-artifact@v2
+        with:
+          name: update_results
+          path: |
+            update_info.xml
+            Update-AUPackages.md
+            au_temp.zip
