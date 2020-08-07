@@ -1,8 +1,9 @@
 name: Auto Update
 
 on:
-  push:
-    branch: [gh_actions]
+  workflow_dispatch: # Enable manual trigger
+  schedule:
+    - cron:  '5 0/8 * * *'
 
 jobs:
   auto_update:
