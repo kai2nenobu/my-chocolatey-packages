@@ -2,6 +2,10 @@ name: Continuous Build
 
 on:
   workflow_dispatch: # Enable manual trigger
+    inputs:
+      refs:
+        description: Reference of git (like refs/heads/master or refs/tags/v1.0.0)
+        required: true
   push:
     branches: 'package/*'
     tags: '*'
@@ -23,6 +27,10 @@ jobs:
           choco --version
       - name: Detect a target package # from a tag name or a branch name
         run: |
+          if ($env:GITHUB_EVENT_NAME -eq 'workflow_dispatch') {
+            # Overwrite GITHUB_REF with a trigger input
+            $env:GITHUB_REF = '${{ github.event.inputs.refs }}'
+          }
           $refs = $env:GITHUB_REF -split '/'
           if ($refs[1] -eq 'tags') {
             $packageId = $refs[2]
