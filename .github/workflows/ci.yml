@@ -3,7 +3,7 @@ name: Continuous Build
 on:
   workflow_dispatch: # Enable manual trigger
     inputs:
-      refs:
+      git_ref:
         description: Reference of git (like refs/heads/master or refs/tags/v1.0.0)
         required: true
   push:
@@ -29,7 +29,7 @@ jobs:
         run: |
           if ($env:GITHUB_EVENT_NAME -eq 'workflow_dispatch') {
             # Overwrite GITHUB_REF with a trigger input
-            $env:GITHUB_REF = '${{ github.event.inputs.refs }}'
+            $env:GITHUB_REF = '${{ github.event.inputs.git_ref }}'
           }
           $refs = $env:GITHUB_REF -split '/'
           if ($refs[1] -eq 'tags') {
