@@ -6,15 +6,13 @@ on:
     branches: 'package/*'
     tags: '*'
 
-defaults:
-  runs-on: windows-2019
-
 env:
   MINGW_ROOT: 'C:\MinGW'
   MSYS2_ROOT: 'C:\msys64'
 
 jobs:
   init:
+    runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
       - name: Check a build environment
@@ -37,8 +35,10 @@ jobs:
           }
           'Package:{0},Version:{1}' -f $env:PACKAGE_ID, $env:PACKAGE_VERSION
   package:
+    runs-on: windows-2019
     steps:
       - run: echo Packaging
   publish:
+    runs-on: windows-2019
     steps:
       - run: echo Publishing
