@@ -15,7 +15,7 @@ env:
   MSYS2_ROOT: 'C:\msys64'
 
 jobs:
-  init:
+  build:
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
@@ -25,16 +25,21 @@ jobs:
           $PSVersionTable
           git --version
           choco --version
+          env | grep -i 'github\|runner' | sort
+          '${{ toJson(github) }}'
       - name: Detect a target package # from a tag name or a branch name
         run: |
           if ($env:GITHUB_EVENT_NAME -eq 'workflow_dispatch') {
             # Overwrite GITHUB_REF with a trigger input
             $env:GITHUB_REF = '${{ github.event.inputs.git_ref }}'
           }
+          ## Extract package id from ref
           $refs = $env:GITHUB_REF -split '/'
           if ($refs[1] -eq 'tags') {
+            # Tag like "refs/tags/<package_id>/<package_version>"
             $packageId = $refs[2]
-          } else if (($refs[1] -eq 'heads') -and ($res[2] -eq 'package')) {
+          } elseif (($refs[1] -eq 'heads') -and ($refs[2] -eq 'package')) {
+            # Branch like "refs/heads/package/<package_id>"
             $packageId = $refs[3]
           } else {
             $message = 'Cannot extract a package id from ref "{0}"' -f $env:GITHUB_REF
