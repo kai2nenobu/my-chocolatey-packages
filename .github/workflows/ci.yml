@@ -41,12 +41,7 @@ jobs:
             Write-Error -Message $message
             exit 1
           }
-          'Package:{0},Version:{1}' -f $env:PACKAGE_ID, $env:PACKAGE_VERSION
-  package:
-    runs-on: windows-2019
-    steps:
-      - run: echo Packaging
-  publish:
-    runs-on: windows-2019
-    steps:
-      - run: echo Publishing
+      - name: Package
+        run: Write-Host "Packaging $env:PACKAGE_ID"
+      - name: Publish
+        run: Write-Host "Publishing $env:PACKAGE_ID"
