@@ -53,6 +53,14 @@ jobs:
           }
           # Pass a package id to subsequent steps
           "::set-env name=PACKAGE_ID::$packageId"
+      - name: Build (if build is required)
+        run: |
+          cd $env:PACKAGE_ID
+          if (Test-Path -LiteralPath build.bat) {
+            .\build.bat
+          } else {
+            'Nothing to build'
+          }
       - name: Package
         run: Write-Host "Packaging $env:PACKAGE_ID"
       - name: Publish
