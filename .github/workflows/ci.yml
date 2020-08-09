@@ -41,6 +41,13 @@ jobs:
             Write-Error -Message $message
             exit 1
           }
+          if (-not (Test-Path -LiteralPath $packageId)) {
+            $message = 'Directory for package "{0}" not found' -f $packageId
+            Write-Error -Message $message
+            exit 1
+          }
+          # Pass a package id to subsequent steps
+          "::set-env name=PACKAGE_ID::$packageId"
       - name: Package
         run: Write-Host "Packaging $env:PACKAGE_ID"
       - name: Publish
