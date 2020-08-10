@@ -13,7 +13,6 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 | [aws-sam-cli](aws-sam-cli)                  | [SAM CLI (Beta)](https://aws.amazon.com/serverless/sam/)                               | [![aws-sam-cli version][aws-sam-cli_version]][aws-sam-cli_package]                      |           | ✓            |
 | [busybox-w32](busybox-w32)                  | [WIN32 native port of BusyBox](https://frippery.org/busybox/)                          | [![busybox-w32 version][busybox-w32_version]][busybox-w32_package]                      | ✓         | ✓            |
 | [cmigemo](cmigemo)                          | [C/Migemo](https://github.com/koron/cmigemo)                                           | [![cmigemo version][cmigemo_version]][cmigemo_package]                                  |           |              |
-| [cpdf-cr](cpdf-cr)                          | [Coherent PDF Command Line Tools Community Release](http://community.coherentpdf.com/) | [![cpdf-cr version][cpdf-cr_version]][cpdf-cr_package]                                  |           |              |
 | [mape](mape)                                | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)             | [![mape version][mape_version]][mape_package]                                           |           | ✓            |
 | [ghq](ghq)                                  | [ghq](https://github.com/motemen/ghq)                                                  | [![ghq version][ghq_version]][ghq_package]                                              | ✓         | ✓            |
 | [gibo](gibo)                                | [fast access to .gitignore boilerplates](https://github.com/simonwhitaker/gibo)        | [![gibo version][gibo_version]][gibo_package]                                           | ✓         | ✓            |
@@ -22,7 +21,6 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 | [pet](pet)                                  | [pet : CLI Snippet Manager](https://github.com/knqyf263/pet)                           | [![pet version][pet_version]][pet_package]                                              | ✓         | ✓            |
 | [pleiades-java](pleiades-java)              | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java version][pleiades-java_version]][pleiades-java_package]                |           | ✓            |
 | [pleiades-java-full](pleiades-java-full)    | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java-full version][pleiades-java-full_version]][pleiades-java-full_package] |           | ✓            |
-| [DEPRECATED] [ssh-agent-wsl](ssh-agent-wsl) | [DEPRECATED] [ssh-agent-wsl](https://github.com/rupor-github/ssh-agent-wsl)            | [![ssh-agent-wsl version][ssh-agent-wsl_version]][ssh-agent-wsl_package]                | ✓         | ✓            |
 | [wsl-ssh-agent](wsl-ssh-agent)              | [wsl-ssh-agent](https://github.com/rupor-github/wsl-ssh-agent)                         | [![wsl-ssh-agent version][wsl-ssh-agent_version]][wsl-ssh-agent_package]                | ✓         | ✓            |
 
 [a5m2_version]: https://img.shields.io/myget/kai2nenobu/v/a5m2.svg?label=myget
@@ -33,8 +31,6 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [busybox-w32_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/busybox-w32
 [cmigemo_version]: https://img.shields.io/myget/kai2nenobu/v/cmigemo.svg?label=myget
 [cmigemo_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/cmigemo
-[cpdf-cr_version]: https://img.shields.io/myget/kai2nenobu/v/cpdf-cr.svg?label=myget
-[cpdf-cr_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/cpdf-cr
 [ghq_version]: https://img.shields.io/myget/kai2nenobu/v/ghq.svg?label=myget
 [ghq_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/ghq
 [gibo_version]: https://img.shields.io/myget/kai2nenobu/v/gibo.svg?label=gibo
@@ -51,8 +47,6 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [pleiades-java_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java
 [pleiades-java-full_version]: https://img.shields.io/myget/kai2nenobu/v/pleiades-java-full.svg?label=myget
 [pleiades-java-full_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java-full
-[ssh-agent-wsl_version]: https://img.shields.io/myget/kai2nenobu/v/ssh-agent-wsl.svg?label=myget
-[ssh-agent-wsl_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/ssh-agent-wsl
 [wsl-ssh-agent_version]: https://img.shields.io/myget/kai2nenobu/v/wsl-ssh-agent.svg?label=myget
 [wsl-ssh-agent_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/wsl-ssh-agent
 
