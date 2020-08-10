@@ -54,8 +54,8 @@ jobs:
           # Slack webhook URL
           slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
 
-          # AppVeyor build url which points to this build
-          APPVEYOR_BUILD_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          # GitHub Actions build url which points to this build
+          GH_ACTIONS_BUILD_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
       - name: Upload update results
         uses: actions/upload-artifact@v2
         with:
