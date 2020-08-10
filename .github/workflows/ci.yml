@@ -27,7 +27,6 @@ jobs:
           git --version
           choco --version
           cmd /c "set" | grep -i 'github\|runner' | sort
-          '${{ toJson(github) }}'
       - name: Detect a target package # from a tag name or a branch name
         run: |
           if ($env:GITHUB_EVENT_NAME -eq 'workflow_dispatch') {
