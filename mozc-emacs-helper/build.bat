@@ -5,6 +5,8 @@ set PATCH_COMMAND=%MSYS2_ROOT%\usr\bin\patch
 
 set MOZC_REPOSITORY=https://github.com/google/mozc.git
 set COMMIT_HASH=afb03ddfe72dde4cf2409863a3bfea160f7a66d8
+REM Use python 2.7
+set PATH=%PYTHON27_ROOT%;%PATH%
 
 REM Install requirements
 choco install ninja --version 1.7.2 --yes
