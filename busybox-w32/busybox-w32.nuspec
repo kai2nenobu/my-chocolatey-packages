@@ -3,15 +3,15 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>busybox-w32</id>
-    <version>1.29.0</version>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/busybox-w32</packageSourceUrl>
+    <version>1.33.0.3532</version>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/tree/master/busybox-w32</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>kai2nenobu</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>WIN32 native port of BusyBox.</title>
+    <title>WIN32 native port of BusyBox</title>
     <authors>See https://github.com/rmyorston/busybox-w32/blob/master/AUTHORS</authors>
     <projectUrl>https://frippery.org/busybox/</projectUrl>
     <!-- <iconUrl></iconUrl> -->
@@ -37,6 +37,8 @@ See https://github.com/rmyorston/busybox-w32/blob/master/README.md
 
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
+    <file src="README.md" target="." />
   </files>
 </package>

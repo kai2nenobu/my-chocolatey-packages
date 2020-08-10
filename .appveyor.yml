@@ -2,9 +2,6 @@ image: Visual Studio 2015
 version: 0.0.1.{build}
 
 environment:
-  MYGET_FEED: 'https://www.myget.org/F/kai2nenobu'
-  MYGET_API_KEY:
-    secure: Y/8UFTPxim7reHigg7iClTv5cu1QI4yA+zPs4DelBkFyMlUZxkzppJGkijKUuRVZ
   MINGW_ROOT: 'C:\MinGW'
   MSYS2_ROOT: 'C:\msys64'
 # Disable automatic builds
@@ -16,38 +13,57 @@ before_build:
   - set PATH=C:\MinGW\bin;%PATH%
   # Detect a target package from a tag name or a branch name
   - ps: |
-      if ($env:APPVEYOR_REPO_BRANCH -eq 'master')  {
-        if ($env:APPVEYOR_REPO_TAG -eq "true") {
-          $array = $env:APPVEYOR_REPO_TAG_NAME -split '/'
+      if ($env:APPVEYOR_REPO_TAG -eq "true") {
+        $array = $env:APPVEYOR_REPO_TAG_NAME -split '/'
+        if ($array.Length -eq 2) {
           $env:PACKAGE_ID = $array[0]
           $env:PACKAGE_VERSION = $array[1]
         } else {
-          Write-Error -Message "Build on master branch must have a tag"
+          $m = 'Tag name does not match "<package-id>/<package-version>": {0}' -f $env:APPVEYOR_REPO_TAG_NAME
+          Write-Error -Message $m
           exit 1
         }
       } else {
         $array = $env:APPVEYOR_REPO_BRANCH -split '/'
-        $env:PREFIX = $array[0]
-        $env:PACKAGE_ID = $array[1]
+        if (($array.Length -eq 2) -and ($array[0] -eq 'package')) {
+          $env:PACKAGE_ID = $array[1]
+        } else {
+          $m = 'Branch name does not match "package/<package-id>": {0}' -f $env:APPVEYOR_REPO_BRANCH
+          Write-Error -Message $m
+          exit 1
+        }
       }
       if (-not $env:PACKAGE_ID) {
-        Write-Error -Message "Cannot extract a package id"
+        Write-Error -Message 'Cannot extract a package id'
         exit 2
       }
+      'Package:{0},Version:{1}' -f $env:PACKAGE_ID, $env:PACKAGE_VERSION
 build_script:
   - echo Build %PACKAGE_ID%
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
   # Build
   - if exist build.bat .\build.bat
+  - if exist build.ps1 powershell -File .\build.ps1
   # Packaging
-  - choco pack
+  - ps: |
+      if (Test-Path "${env:PACKAGE_ID}.nuspec") {
+        if ([string]::IsNullOrEmpty($env:PACKAGE_VERSION)) {
+          choco pack
+        } else {
+          choco pack --version $env:PACKAGE_VERSION
+        }
+      }
   - dir
 test_script:
   - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
   - if exist test.bat .\test.bat
-deploy_script:
-  - cd "%APPVEYOR_BUILD_FOLDER%\%PACKAGE_ID%"
-  - choco push -s "%MYGET_FEED%" -k "%MYGET_API_KEY%"
+deploy:
+  provider: NuGet
+  server: 'https://www.myget.org/F/kai2nenobu'  # MyGet feed for myown
+  api_key:
+    secure: Y/8UFTPxim7reHigg7iClTv5cu1QI4yA+zPs4DelBkFyMlUZxkzppJGkijKUuRVZ
+  skip_symbols: true
+  artifact: /.*\.nupkg/
 artifacts:
   # pushing all *.nupkg files in build directory recursively
   - path: '**\*.nupkg'
@@ -59,13 +75,10 @@ notifications:
     on_build_failure: true
     on_build_status_changed: false
 
+skip_non_tags: true  # Build only on tags
+
 for:
-  # Run a build in master branch only if a tag is pushed
-  -
-    branches:
-      only:
-        - master
-    skip_non_tags: true
+  # Build every commits on package specific branches
   -
     branches:
       only:

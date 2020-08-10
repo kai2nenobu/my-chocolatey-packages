@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>aws-sam-cli</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/tree/master/aws-sam-cli</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>kai2nenobu</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>SAM CLI (Beta)</title>
+    <authors>Amazon Web Services</authors>
+    <projectUrl>https://aws.amazon.com/serverless/sam/</projectUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <copyright>Takamasa Uramoto</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <licenseUrl>https://github.com/ipponshimeji/MAPE/blob/1.0.21.0_beta/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/awslabs/aws-sam-cli</projectSourceUrl>
+    <docsUrl>https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/awslabs/aws-sam-cli/issues</bugTrackerUrl>
+    <tags>serverless aws lambda serverlessapplicationmodel sam docker api-gateway python</tags>
+    <summary>AWS SAM CLI is a CLI tool for local development and testing of Serverless applications</summary>
+    <description>sam is the AWS CLI tool for managing Serverless applications written with [AWS Serverless Application Model (SAM)](https://github.com/awslabs/serverless-application-model). SAM CLI can be used to test functions locally, start a local API Gateway from a SAM template, validate a SAM template, fetch logs, generate sample payloads for various event sources, and generate a SAM project in your favorite Lambda Runtime.</description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

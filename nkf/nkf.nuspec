@@ -3,8 +3,8 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>nkf</id>
-    <version>2.1.4</version>
-    <packageSourceUrl>https://github.com/kai2nenobu/chocolatey_packages/tree/master/nkf</packageSourceUrl>
+    <version>2.1.5</version>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/tree/master/nkf</packageSourceUrl>
     <owners>Tsunenobu Kai</owners>
     <!-- ============================== -->
 
