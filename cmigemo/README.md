@@ -1,3 +1,5 @@
 ﻿# Chocolatey C/Migemo package
 
-This package will download and install [C/Migemo](https://www.kaoriya.net/software/cmigemo/) library and executale.
+This package installs [C/Migemo](https://github.com/koron/cmigemo.git) library and executale.
+
+This package is built on GitHub Actions.
