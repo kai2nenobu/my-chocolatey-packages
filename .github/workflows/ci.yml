@@ -1,4 +1,4 @@
-name: Continuous Build
+name: Continuous Packaging
 
 on:
   workflow_dispatch: # Enable manual trigger
