@@ -22,7 +22,4 @@ call "%MSYS2_SHELL%" -mingw32 -defterm -no-start -here -c "export PATH=/c/Progra
 REM Print version
 ..\cmigemo\bin\cmigemo --help
 
-REM DEBUG
-dir /S ..\
-
 endlocal
