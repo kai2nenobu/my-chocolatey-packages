@@ -26,7 +26,7 @@ jobs:
           $PSVersionTable
           git --version
           choco --version
-          env | grep -i 'github\|runner' | sort
+          cmd /c "set" | grep -i 'github\|runner' | sort
           '${{ toJson(github) }}'
       - name: Detect a target package # from a tag name or a branch name
         run: |
@@ -54,7 +54,8 @@ jobs:
           }
           # Pass a package id to subsequent steps
           "::set-env name=PACKAGE_ID::$packageId"
-      - name: Build (if build is required)
+      - name: Build (if needed)
+        working-directory: ${{ env.PACKAGE_ID }}
         run: |
           if (Test-Path -LiteralPath build.bat) {
             # Add mingw toolchains into PATH
