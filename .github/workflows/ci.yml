@@ -11,7 +11,7 @@ on:
     tags: '*'
 
 env:
-  MINGW_ROOT: 'C:\MinGW'
+  MINGW_ROOT: 'C:\msys64\mingw32'
   MSYS2_ROOT: 'C:\msys64'
   PYTHON27_ROOT: 'C:\hostedtoolcache\windows\Python\2.7.18\x64'
 
@@ -56,8 +56,9 @@ jobs:
           "::set-env name=PACKAGE_ID::$packageId"
       - name: Build (if build is required)
         run: |
-          cd $env:PACKAGE_ID
           if (Test-Path -LiteralPath build.bat) {
+            # Add mingw toolchains into PATH
+            $env:PATH = "${env:MINGW_ROOT}/bin;${env:MSYS2_ROOT}/bin;${env:PATH}"
             .\build.bat
           } else {
             'Nothing to build'
