@@ -1,17 +1,22 @@
-name: Continuous Build
+name: Continuous Packaging
 
 on:
   workflow_dispatch: # Enable manual trigger
+    inputs:
+      git_ref:
+        description: Reference of git (like refs/heads/master or refs/tags/v1.0.0)
+        required: true
   push:
     branches: 'package/*'
     tags: '*'
 
 env:
-  MINGW_ROOT: 'C:\MinGW'
+  MINGW_ROOT: 'C:\msys64\mingw32'
   MSYS2_ROOT: 'C:\msys64'
+  PYTHON27_ROOT: 'C:\hostedtoolcache\windows\Python\2.7.18\x64'
 
 jobs:
-  init:
+  build:
     runs-on: windows-2019
     steps:
       - uses: actions/checkout@v2
@@ -21,24 +26,56 @@ jobs:
           $PSVersionTable
           git --version
           choco --version
+          cmd /c "set" | grep -i 'github\|runner' | sort
+          '${{ toJson(github) }}'
       - name: Detect a target package # from a tag name or a branch name
         run: |
+          if ($env:GITHUB_EVENT_NAME -eq 'workflow_dispatch') {
+            # Overwrite GITHUB_REF with a trigger input
+            $env:GITHUB_REF = '${{ github.event.inputs.git_ref }}'
+          }
+          ## Extract package id from ref
           $refs = $env:GITHUB_REF -split '/'
           if ($refs[1] -eq 'tags') {
+            # Tag like "refs/tags/<package_id>/<package_version>"
             $packageId = $refs[2]
-          } else if (($refs[1] -eq 'heads') -and ($res[2] -eq 'package')) {
+          } elseif (($refs[1] -eq 'heads') -and ($refs[2] -eq 'package')) {
+            # Branch like "refs/heads/package/<package_id>"
             $packageId = $refs[3]
           } else {
             $message = 'Cannot extract a package id from ref "{0}"' -f $env:GITHUB_REF
             Write-Error -Message $message
             exit 1
           }
-          'Package:{0},Version:{1}' -f $env:PACKAGE_ID, $env:PACKAGE_VERSION
-  package:
-    runs-on: windows-2019
-    steps:
-      - run: echo Packaging
-  publish:
-    runs-on: windows-2019
-    steps:
-      - run: echo Publishing
+          if (-not (Test-Path -LiteralPath $packageId)) {
+            $message = 'Directory for package "{0}" not found' -f $packageId
+            Write-Error -Message $message
+            exit 1
+          }
+          # Pass a package id to subsequent steps
+          "::set-env name=PACKAGE_ID::$packageId"
+      - name: Build (if needed)
+        working-directory: ${{ env.PACKAGE_ID }}
+        run: |
+          if (Test-Path -LiteralPath build.bat) {
+            # Add mingw toolchains into PATH
+            $env:PATH = "${env:MINGW_ROOT}/bin;${env:MSYS2_ROOT}/bin;${env:PATH}"
+            .\build.bat
+          } else {
+            'Nothing to build'
+          }
+      - name: Package
+        working-directory: ${{ env.PACKAGE_ID }}
+        run: |
+          choco pack
+          if (Test-Path -LiteralPath test.bat) {
+            .\test.bat
+          }
+      - name: Save a package as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.PACKAGE_ID }}_package
+          path: '**/*.nupkg'
+      - name: Publish
+        working-directory: ${{ env.PACKAGE_ID }}
+        run: choco push --source https://www.myget.org/F/kai2nenobu/ --api-key ${{ secrets.MYGET_API_KEY }}

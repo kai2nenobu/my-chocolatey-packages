@@ -5,15 +5,17 @@ set PATCH_COMMAND=%MSYS2_ROOT%\usr\bin\patch
 
 set MOZC_REPOSITORY=https://github.com/google/mozc.git
 set COMMIT_HASH=afb03ddfe72dde4cf2409863a3bfea160f7a66d8
+REM Use python 2.7
+set PATH=%PYTHON27_ROOT%;%PATH%
 
 REM Install requirements
 choco install ninja --version 1.7.2 --yes
 
 REM Checkout source
-"%GIT_COMMAND%" clone "%MOZC_REPOSITORY%" -b master --single-branch
+"%GIT_COMMAND%" clone "%MOZC_REPOSITORY%" -b master --single-branch --depth 1
 cd mozc
 "%GIT_COMMAND%" checkout "%COMMIT_HASH%"
-"%GIT_COMMAND%" submodule update --init --recursive
+"%GIT_COMMAND%" submodule update --init --recursive --depth 1
 
 REM Build mozc
 "%PATCH_COMMAND%" -p1 < ..\win32_build.patch
