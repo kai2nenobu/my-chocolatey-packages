@@ -65,6 +65,11 @@ jobs:
             'Nothing to build'
           }
       - name: Package
-        run: Write-Host "Packaging $env:PACKAGE_ID"
+        working-directory: ${{ env.PACKAGE_ID }}
+        run: |
+          choco pack
+          if (Test-Path -LiteralPath test.bat) {
+            .\test.bat
+          }
       - name: Publish
         run: Write-Host "Publishing $env:PACKAGE_ID"
