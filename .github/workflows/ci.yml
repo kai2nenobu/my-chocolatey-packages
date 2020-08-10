@@ -77,4 +77,5 @@ jobs:
           name: ${{ env.PACKAGE_ID }}_package
           path: '**/*.nupkg'
       - name: Publish
-        run: Write-Host "Publishing $env:PACKAGE_ID"
+        working-directory: ${{ env.PACKAGE_ID }}
+        run: choco push --source https://www.myget.org/F/kai2nenobu/ --api-key ${{ secrets.MYGET_API_KEY }}
