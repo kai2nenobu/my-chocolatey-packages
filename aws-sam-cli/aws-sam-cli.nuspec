@@ -11,13 +11,13 @@
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>SAM CLI (Beta)</title>
-    <authors>Amazon Web Services</authors>
+    <title>AWS SAM CLI</title>
+    <authors>Amazon.com</authors>
     <projectUrl>https://aws.amazon.com/serverless/sam/</projectUrl>
     <!-- <iconUrl></iconUrl> -->
-    <copyright>Takamasa Uramoto</copyright>
+    <copyright>Amazon.com, Inc. or its affiliates</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://github.com/ipponshimeji/MAPE/blob/1.0.21.0_beta/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/awslabs/aws-sam-cli/blob/develop/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/awslabs/aws-sam-cli</projectSourceUrl>
     <docsUrl>https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/</docsUrl>

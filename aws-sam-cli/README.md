@@ -1,3 +1,3 @@
 # aws-sam-cli
 
-This package installs [SAM CLI (Beta)](https://aws.amazon.com/serverless/sam/).
+This package installs [AWS SAM CLI](https://aws.amazon.com/serverless/sam/).
