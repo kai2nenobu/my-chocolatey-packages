@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>hackgen</id>
+    <title>Programming Font HackGen</title>
+    <version>2.0.0-pre</version>
+    <authors>Yuko Otawara</authors>
+    <owners>kai2nenobu</owners>
+    <summary>HackGen is a composite font of Hack and GenJyuu-Gothic.</summary>
+    <description>HackGen is a programming font that is a combination of Hack, an English font for programming, and GenJyuu-Gothic, a derivative of Source Han Sans.</description>
+    <projectUrl>https://github.com/yuru7/HackGen</projectUrl>
+    <tags>font admin hack monospace programming</tags>
+    <copyright>Yuko Otawara</copyright>
+    <licenseUrl>https://github.com/yuru7/HackGen/blob/v2.0.0/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+    <releaseNotes>https://github.com/yuru7/HackGen/releases/tag/v2.0.0</releaseNotes>
+    <docsUrl>https://github.com/yuru7/HackGen/blob/v2.0.0/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/yuru7/HackGen/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/yuru7/HackGen</projectSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/hackgen</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

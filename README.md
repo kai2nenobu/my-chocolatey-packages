@@ -16,6 +16,7 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 | [mape](mape)                                | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)             | [![mape version][mape_version]][mape_package]                                           |           | ✓            |
 | [ghq](ghq)                                  | [ghq](https://github.com/motemen/ghq)                                                  | [![ghq version][ghq_version]][ghq_package]                                              | ✓         | ✓            |
 | [gibo](gibo)                                | [fast access to .gitignore boilerplates](https://github.com/simonwhitaker/gibo)        | [![gibo version][gibo_version]][gibo_package]                                           | ✓         | ✓            |
+| [hackgen](hackgen)                          | [Programming Font HackGen](https://github.com/yuru7/HackGen)                           | [![hackgen version][hackgen_version]][hackgen_package]                                  | ✓         |              |
 | [mozc-emacs-helper](mozc-emacs-helper)      | [Mozc Emacs Helper](https://github.com/google/mozc/tree/master/src/unix/emacs)         | [![mozc-emacs-helper version][mozc-emacs-helper_version]][mozc-emacs-helper_package]    | ✓         |              |
 | [nkf](nkf)                                  | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          | [![nkf version][nkf_version]][nkf_package]                                              | ✓         |              |
 | [pet](pet)                                  | [pet : CLI Snippet Manager](https://github.com/knqyf263/pet)                           | [![pet version][pet_version]][pet_package]                                              | ✓         | ✓            |
@@ -35,6 +36,8 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [ghq_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/ghq
 [gibo_version]: https://img.shields.io/myget/kai2nenobu/v/gibo.svg?label=gibo
 [gibo_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/gibo
+[hackgen_version]: https://img.shields.io/myget/kai2nenobu/v/hackgen.svg?label=myget
+[hackgen_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/hackgen
 [mape_version]: https://img.shields.io/myget/kai2nenobu/v/mape.svg?label=myget
 [mape_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/mape
 [mozc-emacs-helper_version]: https://img.shields.io/myget/kai2nenobu/v/mozc-emacs-helper.svg?label=myget
