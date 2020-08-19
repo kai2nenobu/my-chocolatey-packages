@@ -1,6 +1,6 @@
 ﻿import-module au
 
-$json = @'
+$fixedVersion = @'
 [
   {
     "url": "https://api.github.com/repos/yuru7/HackGen/releases/27117041",
@@ -117,7 +117,7 @@ function global:au_GetLatest {
   ## Find a latest release and extract zip URL from GitHub Releases
   #$releases = 'https://api.github.com/repos/yuru7/HackGen/releases'
   #$releases_info = Invoke-RestMethod -Uri $releases
-  $releases_info = ($json | ConvertFrom-Json)
+  $releases_info = ($fixedVesion | ConvertFrom-Json)
   foreach ($release in $releases_info) {
     $tag = $release.tag_name
     if ($release.prerelease) {
