@@ -119,14 +119,20 @@ function global:au_GetLatest {
   #$releases_info = Invoke-RestMethod -Uri $releases
   $releases_info = ($json | ConvertFrom-Json)
   foreach ($release in $releases_info) {
-    if (-not $release.prerelease) {
-      $tag = $release.tag_name
-      $url = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
-      return @{
-        Tag = $tag
-        Version = $tag -replace "^v",""
-        URL32 = $url
-      }
+    $tag = $release.tag_name
+    if ($release.prerelease) {
+      Write-Warning ('Ignore prerelease version: "{0}"' -f $tag)
+      continue
+    }
+    if (-not ($tag -match '^v[0-9]+\.[0-9]+\.[0-9]+')) {
+      Write-Warning ('Ignore invalid tag name: "{0}"' -f $tag)
+      continue
+    }
+    $url = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
+    return @{
+      Tag = $tag
+      Version = $tag -replace "^v",""
+      URL32 = $url
     }
   }
 }
