@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>hackgen</id>
-    <title>hackgen</title>
+    <title>Programming Font HackGen</title>
     <version>2.0.0-pre</version>
     <authors>Yuko Otawara</authors>
     <owners>kai2nenobu</owners>
