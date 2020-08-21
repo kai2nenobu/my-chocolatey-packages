@@ -14,11 +14,23 @@ function global:au_GetLatest {
       Write-Warning ('Ignore invalid tag name: "{0}"' -f $tag)
       continue
     }
-    $url = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
+    $tag = $release.tag_name
+    $version = $tag -replace "^v",""
+    $normalZip = $release.assets | Where-Object { $_.name -eq "HackGen_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
+    $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGenNerd_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     return @{
-      Tag = $tag
-      Version = $tag -replace "^v",""
-      URL32 = $url
+      Streams = [ordered] @{
+        'normal' = @{
+          Tag = $tag
+          Version = $version
+          URL32 = $url
+        }
+        'nerd' = @{
+          Tag = $tag
+          Version = $version
+          URL32 = $nerdZip
+        }
+      }
     }
   }
 }
