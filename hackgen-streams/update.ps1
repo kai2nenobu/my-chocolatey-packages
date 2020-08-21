@@ -40,7 +40,7 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-   @{
+   $replaceDict = @{
         ".\hackgen-streams.nuspec" = @{
           '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
           '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
@@ -52,6 +52,15 @@ function global:au_SearchReplace {
           '(Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
         }
     }
+  # Replace common.ps1
+  if ($Latest.Stream -eq 'nerd') {
+    $replaceDist[".\tools\commons.ps1"] = @{
+      'HackGen(35)?(Nerd)?(Console)?-' = 'HackGen${1}Nerd${3}-'
+    } else {
+      'HackGen(35)?(Nerd)?(Console)?-' = 'HackGen${1}${3}-'
+    }
+  }
+  return $replaceDict
 }
 
 Update-Package -NoReadme
