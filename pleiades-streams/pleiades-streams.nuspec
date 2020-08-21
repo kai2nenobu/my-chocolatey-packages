@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>pleiades-java</id>
+    <id>pleiades-streams</id>
     <version>2020.06.20200702</version>
     <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/tree/master/pleiades</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
