@@ -20,19 +20,19 @@ function global:au_GetLatest {
     $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGenNerd_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     return @{
       Streams = [ordered] @{
-        'nerd' = @{
-          PackageName = 'hackgen-nerd'
-          Tag = $tag
-          Version = $version
-          URL32 = $nerdZip
-          Prefix = 'HackGenNerd'
-        }
         'normal' = @{
           PackageName = 'hackgen'
           Tag = $tag
           Version = $version
           URL32 = $normalZip
           Prefix = 'HackGen'
+        }
+        'nerd' = @{
+          PackageName = 'hackgen-nerd'
+          Tag = $tag
+          Version = $version
+          URL32 = $nerdZip
+          Prefix = 'HackGenNerd'
         }
       }
     }
