@@ -20,15 +20,15 @@ function global:au_GetLatest {
     $nerdZip = $release.assets | Where-Object { $_.name -eq "HackGenNerd_${tag}.zip" } | Select-Object -First 1 -Expand browser_download_url
     return @{
       Streams = [ordered] @{
-        'normal' = @{
-          Tag = $tag
-          Version = $version
-          URL32 = $url
-        }
         'nerd' = @{
           Tag = $tag
           Version = $version
           URL32 = $nerdZip
+        }
+        'normal' = @{
+          Tag = $tag
+          Version = $version
+          URL32 = $normalZip
         }
       }
     }
@@ -37,7 +37,7 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-        ".\hackgen.nuspec" = @{
+        ".\hackgen-streams.nuspec" = @{
           '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
           '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
         }
