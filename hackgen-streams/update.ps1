@@ -40,7 +40,13 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-  $replaceDict = @{
+  # Replace font names in common.ps1
+  if ($Latest.Stream -eq 'nerd') {
+    $fontReplacement = 'HackGen${1}Nerd${3}-'
+  } else {
+    $fontReplacement = 'HackGen${1}${3}-'
+  }
+  @{
     ".\hackgen-streams.nuspec" = @{
       '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
       '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
@@ -51,16 +57,10 @@ function global:au_SearchReplace {
       '(PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
       '(Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
     }
-  }
-  # Replace common.ps1
-  if ($Latest.Stream -eq 'nerd') {
-    $replaceDist[".\tools\commons.ps1"] = @{
-      'HackGen(35)?(Nerd)?(Console)?-' = 'HackGen${1}Nerd${3}-'
-    } else {
-      'HackGen(35)?(Nerd)?(Console)?-' = 'HackGen${1}${3}-'
+    ".\tools\common.ps1" = @{
+      'HackGen(35)?(Nerd)?(Console)?-' = $fontReplacement
     }
   }
-  return $replaceDict
 }
 
 Update-Package -NoReadme
