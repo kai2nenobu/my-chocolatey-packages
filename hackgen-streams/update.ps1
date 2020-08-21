@@ -21,14 +21,18 @@ function global:au_GetLatest {
     return @{
       Streams = [ordered] @{
         'nerd' = @{
+          PackageName = 'hackgen-nerd'
           Tag = $tag
           Version = $version
           URL32 = $nerdZip
+          Prefix = 'HackGenNerd'
         }
         'normal' = @{
+          PackageName = 'hackgen'
           Tag = $tag
           Version = $version
           URL32 = $normalZip
+          Prefix = 'HackGen'
         }
       }
     }
