@@ -40,18 +40,18 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-   $replaceDict = @{
-        ".\hackgen-streams.nuspec" = @{
-          '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
-          '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
-        }
-        ".\tools\ChocolateyInstall.ps1" = @{
-          '^([$]hackgenVersion\s*=).*' = "`${1} '$($Latest.Tag)'"
-          '^([$]hackgenBase\s*=).*' = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
-          '(PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
-          '(Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
-        }
+  $replaceDict = @{
+    ".\hackgen-streams.nuspec" = @{
+      '(/HackGen/blob/)[^/<]*' = "`${1}$($Latest.Tag)"
+      '(/HackGen/releases/tag/)[^/<]*' = "`${1}$($Latest.Tag)"
     }
+    ".\tools\ChocolateyInstall.ps1" = @{
+      '^([$]hackgenVersion\s*=).*' = "`${1} '$($Latest.Tag)'"
+      '^([$]hackgenBase\s*=).*' = "`${1} '$($Latest.Prefix)_$($Latest.Tag)'"
+      '(PackageName\s*=).*' = "`${1} '$($Latest.PackageName)'"
+      '(Checksum\s*=).*' = "`${1} '$($Latest.Checksum32)'"
+    }
+  }
   # Replace common.ps1
   if ($Latest.Stream -eq 'nerd') {
     $replaceDist[".\tools\commons.ps1"] = @{
