@@ -2,6 +2,10 @@ name: Auto Update
 
 on:
   workflow_dispatch: # Enable manual trigger
+    inputs:
+      forced_packages:
+        description: The list of packages to forcibly update (like "pkg1:ver1 pkg2")
+        required: false
   schedule:
     - cron:  '5 0/8 * * *'
 
@@ -18,6 +22,7 @@ jobs:
           $PSVersionTable
           git --version
           choco --version
+          cmd /c "set" | grep -i 'github\|runner' | sort
       - name: Initialize Git config
         run: |
           git config --global user.email "chocolatey@realdimensions.net"
@@ -32,7 +37,7 @@ jobs:
       - name: Check update for packages
         run: |
           $ErrorActionPreference = 'Continue'
-          ./update_all.ps1 -ForcedPackages $forced
+          ./update_all.ps1 -ForcedPackages '${{ github.event.inputs.forced_packages }}'
           7z a au_temp.zip $Env:TEMP\chocolatey\au\*
         env:
           au_push: true
