@@ -54,7 +54,7 @@ $body = @{
       )
     }
   )
-} | ConvertTo-Json -Compress
+} | ConvertTo-Json -Compress -Depth 10
 
 $arguments = @{
   Uri = $WebHookUrl
