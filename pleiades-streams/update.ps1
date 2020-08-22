@@ -35,8 +35,14 @@ function global:au_GetLatest {
       'platform' = @{
         URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-platform-win-64bit_{2}.zip' -f $version.array
       }
+      'platform-full' = @{
+        URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-platform-win-64bit-jre_{2}.zip' -f $version.array
+      }
       'java' = @{
         URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-java-win-64bit_{2}.zip' -f $version.array
+      }
+      'java-full' = @{
+        URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-java-win-64bit-jre_{2}.zip' -f $version.array
       }
     }
   }
