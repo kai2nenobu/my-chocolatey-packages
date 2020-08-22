@@ -15,9 +15,14 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
   @{
+    "pleiades-streams.nuspec" = @{
+      '(?i)(^\s*\<title\>).*(\<\/title\>)' = "`${1}$($Latest.Title)`${2}"
+    }
     "tools\chocolateyInstall.ps1" = @{
+      "(^\s*[$]packageName)\s*=.*" = "`${1} = '$($Latest.PackageName)'"
       "(^\s*[$]url)\s*=.*" = "`${1} = '$($Latest.URL64)'"
       "(^\s*[$]checksum)\s*=.*" = "`${1} = '$($Latest.Checksum64)'"
+      "(^\s*[$]shortcutName)\s*=.*" = "`${1} = '$($Latest.Title).lnk'"
     }
   }
 }
