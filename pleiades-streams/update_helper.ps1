@@ -48,6 +48,27 @@ function Get-PleiadesZipUrl {
   return 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-{3}-win-64bit{4}_{2}.zip' -f $formatParams
 }
 
+function Get-PleiadesTitle {
+  <#
+  .SYNOPSIS
+  Format a title for pleiades package
+  #>
+  [CmdletBinding()]
+  param(
+    [string]$Name,
+    [boolean]$FullEdition=$false
+  )
+  $formatParams = @()
+  $formatParams += (Get-Culture).TextInfo.ToTitleCase($Name)
+  if ($FullEdition) {
+    $formatParams += 'Full'
+  } else {
+    $formatParams += 'Standard'
+  }
+  return 'Pleiades All in One {0} {1} Edition' -f $formatParams
+}
+
+
 function Get-PleiadesStream {
   <#
   .SYNOPSIS
@@ -63,6 +84,7 @@ function Get-PleiadesStream {
   return @{
     PackageName = "pleiades-$StreamName"
     URL64 = (Get-PleiadesZipUrl -Name $name -VersionArray $VersionArray -FullEdition $full)
+    Title = (Get-PleiadesTitle -Name $name -FullEdition $full)
   }
 }
 
