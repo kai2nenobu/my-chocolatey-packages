@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
-$packageName = $env:ChocolateyPackageName
+$packageName = 'pleiades-platform'
 $installPath = Join-Path (Get-ToolsLocation) $packageName
-$url = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2020/pleiades-2020-06-java-win-64bit_20200702.zip'
-$checksum = 'fec34daac9f77e07e79cdbf941001a05'
+$url = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2020/pleiades-2020-06-platform-win-64bit_20200702.zip'
+$checksum = '8fdaf58134c079a5827a60dda51ed60d'
 $checksumType = 'md5'
-$shortcutName = 'Pleiades All in One Java.lnk'
+$shortcutName = 'Pleiades All in One Platform Standard Edition.lnk'
 
 ## Download and install pleaides in a tools directory (Typically "C:\tools")
 Install-ChocolateyZipPackage `

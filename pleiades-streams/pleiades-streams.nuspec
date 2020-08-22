@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>pleiades-streams</id>
+    <id>pleiades-platform</id>
     <version>2020.06.20200702</version>
     <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/tree/master/pleiades</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
@@ -11,7 +11,7 @@
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>Pleiades All in One Java</title>
+    <title>Pleiades All in One Platform Standard Edition</title>
     <authors>Shinji Kashihara</authors>
     <projectUrl>https://ja.osdn.net/projects/mergedoc/</projectUrl>
     <!-- <iconUrl></iconUrl> -->
@@ -25,7 +25,23 @@
     <bugTrackerUrl>https://ja.osdn.net/projects/mergedoc/ticket/</bugTrackerUrl>
     <tags>eclipse ide java</tags>
     <summary>Pleiades - Eclipse プラグイン日本語化プラグイン</summary>
-    <description>Pleiades All in One は Windows、Mac 向けに Eclipse 本体と日本語化を行うための Pleiades プラグインおよびプログラミング言語別に便利なプラグインをまとめたパッケージです。</description>
+    <description><![CDATA[# Pleiades All in One
+
+This repository stores a chocolatey package to install [Pleiades All in One](http://mergedoc.osdn.jp/). Pleiades All in One (Standard Edition) is an eclipse distribution with pleiades (Japanese translation plugin) and other useful plugins. Moreover, Full Edition includes JRE for eclipse and peripheral tools (like compiler, runtime). So you can launch eclipse without installing any other programs.
+
+# Package Information
+
+Chocolatey packages are named as below.
+
+- Standard Edition: `pleiades-{{language}}`
+- Full Edition: `pleiades-{{language}}-full`
+
+Current avaliable languages are `platform`/`java`.
+
+Pleiades is installed in `C:\tools\{{package-id}}`.
+
+These packages install 64bit eclipse only.
+]]></description>
     <releaseNotes>http://mergedoc.osdn.jp/</releaseNotes>
     <!-- =============================== -->
 
