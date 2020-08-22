@@ -26,25 +26,63 @@ function Find-PleiadesVersion {
   }
 }
 
+function Get-PleiadesZipUrl {
+  [CmdletBinding()]
+  param(
+    [string]$Name,
+    [array]$VersionArray,
+    [boolean]$FullEdition=$false
+  )
+  $formatParams = @()
+  $formatParams += $VersionArray
+  $formatParams += $Name
+  if ($FullEdition) {
+    $formatParams += '-jre'
+  } else {
+    $formatParams += ''
+  }
+  return 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-{3}-win-64bit{4}_{2}.zip' -f $formatParams
+}
+
+function Get-PleiadesStream {
+  [CmdletBinding()]
+  param(
+    [string]$StreamName,
+    [array]$VersionArray
+  )
+  $name = $StreamName -replace '-.*$',''
+  $full = $StreamName -match '-full$'
+  return @{
+    PackageName = "pleiades-$StreamName"
+    URL64 = (Get-PleiadesZipUrl -Name $name -VersionArray $VersionArray -FullEdition $full)
+  }
+}
+
+function Get-PleiadesStreams {
+  [CmdletBinding()]
+  param(
+    [array]$VersionArray
+  )
+  $packages = @(
+    'platform'
+    'platform-full'
+    'java'
+    'java-full'
+  )
+  $streams = [ordered] @{}
+  foreach ($package in $packages) {
+    $streams.Add($package, (Get-PleiadesStream $package $VersionArray))
+  }
+  return $streams
+}
+
+
 function global:au_GetLatest {
   $version = Find-PleiadesVersion
   return @{
     Version = $version.semver
     ChecksumType64 = 'md5'
-    Streams = [ordered] @{
-      'platform' = @{
-        URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-platform-win-64bit_{2}.zip' -f $version.array
-      }
-      'platform-full' = @{
-        URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-platform-win-64bit-jre_{2}.zip' -f $version.array
-      }
-      'java' = @{
-        URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-java-win-64bit_{2}.zip' -f $version.array
-      }
-      'java-full' = @{
-        URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-java-win-64bit-jre_{2}.zip' -f $version.array
-      }
-    }
+    Streams = (Get-PleiadesStreams $version.array)
   }
 }
 
