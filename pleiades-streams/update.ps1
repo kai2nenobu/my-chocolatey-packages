@@ -27,4 +27,4 @@ function global:au_SearchReplace {
   }
 }
 
-Update-Package -NoReadme -ChecksumFor 64
+Update-Package -ChecksumFor 64
