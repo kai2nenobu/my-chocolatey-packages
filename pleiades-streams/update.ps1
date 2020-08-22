@@ -30,6 +30,11 @@ function global:au_GetLatest {
   $version = Find-PleiadesVersion
   return @{
     Streams = [ordered] @{
+      'platform' = @{
+        Version = $version.semver
+        URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-platform-win-64bit_{2}.zip' -f $version.array
+        ChecksumType64 = 'md5'
+      }
       'java' = @{
         Version = $version.semver
         URL64 = 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-java-win-64bit_{2}.zip' -f $version.array
