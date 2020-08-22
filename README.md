@@ -20,8 +20,10 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 | [mozc-emacs-helper](mozc-emacs-helper)      | [Mozc Emacs Helper](https://github.com/google/mozc/tree/master/src/unix/emacs)         | [![mozc-emacs-helper version][mozc-emacs-helper_version]][mozc-emacs-helper_package]    | ✓         |              |
 | [nkf](nkf)                                  | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                          | [![nkf version][nkf_version]][nkf_package]                                              | ✓         |              |
 | pet                                         | [Deprecated] [pet : CLI Snippet Manager](https://github.com/knqyf263/pet)              | Migrated to [Chocolatey.org][pet_package]                                               |           |              |
-| [pleiades-java](pleiades-java)              | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java version][pleiades-java_version]][pleiades-java_package]                |           | ✓            |
-| [pleiades-java-full](pleiades-java-full)    | [Pleiades All in One](http://mergedoc.osdn.jp/)                                        | [![pleiades-java-full version][pleiades-java-full_version]][pleiades-java-full_package] |           | ✓            |
+| [pleiades-java](pleiades-streams)           | [Pleiades All in One Java Standard Edition](http://mergedoc.osdn.jp/)                   | [![pleiades-java version][pleiades-java_version]][pleiades-java_package]                |           | ✓            |
+| [pleiades-java-full](pleiades-streams)      | [Pleiades All in One Java Full Edition](http://mergedoc.osdn.jp/)                      | [![pleiades-java-full version][pleiades-java-full_version]][pleiades-java-full_package] |           | ✓            |
+| [pleiades-platform](pleiades-streams)       | [Pleiades All in One Platform Standard Edition](http://mergedoc.osdn.jp/)                | [![pleiades-platform version][pleiades-platform_version]][pleiades-platform_package]                |           | ✓            |
+| [pleiades-platform-full](pleiades-streams)  | [Pleiades All in One Platform Full Edition](http://mergedoc.osdn.jp/)                   | [![pleiades-platform-full version][pleiades-platform-full_version]][pleiades-platform-full_package] |           | ✓            |
 | [wsl-ssh-agent](wsl-ssh-agent)              | [wsl-ssh-agent](https://github.com/rupor-github/wsl-ssh-agent)                         | [![wsl-ssh-agent version][wsl-ssh-agent_version]][wsl-ssh-agent_package]                | ✓         | ✓            |
 
 [a5m2_version]: https://img.shields.io/myget/kai2nenobu/v/a5m2.svg?label=myget
@@ -49,6 +51,10 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [pleiades-java_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java
 [pleiades-java-full_version]: https://img.shields.io/myget/kai2nenobu/v/pleiades-java-full.svg?label=myget
 [pleiades-java-full_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-java-full
+[pleiades-platform_version]: https://img.shields.io/myget/kai2nenobu/v/pleiades-platform.svg?label=myget
+[pleiades-platform_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-platform
+[pleiades-platform-full_version]: https://img.shields.io/myget/kai2nenobu/v/pleiades-platform-full.svg?label=myget
+[pleiades-platform-full_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/pleiades-platform-full
 [wsl-ssh-agent_version]: https://img.shields.io/myget/kai2nenobu/v/wsl-ssh-agent.svg?label=myget
 [wsl-ssh-agent_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/wsl-ssh-agent
 
