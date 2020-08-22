@@ -42,11 +42,16 @@ $color = if ($failedPackages -gt 0) { 'danger' }
          else { '#00b4ff' }
 
 $body = @{
-  color = $color
-  fields = @(
+  text = ''
+  attachments = @(
     @{
-      value = "{0}`n{1}" -f $messageHeader,$message
-      short = $False
+      color = $color
+      fields = @(
+        @{
+          value = "{0}`n{1}" -f $messageHeader,$message
+          short = $False
+        }
+      )
     }
   )
 } | ConvertTo-Json -Compress
