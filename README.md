@@ -18,7 +18,6 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 |--------------------------------------------|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|-----------|--------------|
 | [a5m2](a5m2)                               | [A5:SQL Mk-2](http://a5m2.mmatsubara.com/)                                      | [![a5m2 version][a5m2_version]][a5m2_package]                                                       |           | ✓            |
 | [aws-sam-cli](aws-sam-cli)                 | [AWS SAM CLI](https://aws.amazon.com/serverless/sam/)                           | [![aws-sam-cli version][aws-sam-cli_version]][aws-sam-cli_package]                                  |           | ✓            |
-| [busybox-w32](busybox-w32)                 | [WIN32 native port of BusyBox](https://frippery.org/busybox/)                   | [![busybox-w32 version][busybox-w32_version]][busybox-w32_package]                                  | ✓         | ✓            |
 | [cmigemo](cmigemo)                         | [C/Migemo](https://github.com/koron/cmigemo)                                    | [![cmigemo version][cmigemo_version]][cmigemo_package]                                              |           |              |
 | [ghq](ghq)                                 | [ghq](https://github.com/motemen/ghq)                                           | [![ghq version][ghq_version]][ghq_package]                                                          | ✓         | ✓            |
 | [gibo](gibo)                               | [fast access to .gitignore boilerplates](https://github.com/simonwhitaker/gibo) | [![gibo version][gibo_version]][gibo_package]                                                       | ✓         | ✓            |
@@ -37,8 +36,6 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [a5m2_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/a5m2
 [aws-sam-cli_version]: https://img.shields.io/myget/kai2nenobu/v/aws-sam-cli.svg?label=myget
 [aws-sam-cli_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/aws-sam-cli
-[busybox-w32_version]: https://img.shields.io/myget/kai2nenobu/v/busybox-w32.svg?label=myget
-[busybox-w32_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/busybox-w32
 [cmigemo_version]: https://img.shields.io/myget/kai2nenobu/v/cmigemo.svg?label=myget
 [cmigemo_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/cmigemo
 [ghq_version]: https://img.shields.io/myget/kai2nenobu/v/ghq.svg?label=myget
