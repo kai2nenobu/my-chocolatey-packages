@@ -1,3 +1,10 @@
+[![Auto Update][auto_update_badge]][auto_update_actions]
+
+[auto_update_badge]: https://github.com/kai2nenobu/my-chocolatey-packages/workflows/Auto%20Update/badge.svg
+[auto_update_actions]: https://github.com/kai2nenobu/my-chocolatey-packages/actions?query=workflow%3A%22Auto+Update%22
+
+----
+
 # What is this repository?
 
 This repository stores chocolatey packages for my own.
