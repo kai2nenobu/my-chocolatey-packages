@@ -12,6 +12,9 @@ on:
 jobs:
   auto_update:
     runs-on: windows-2019
+    defaults:
+      run:
+        shell: powershell
     steps:
       - uses: actions/checkout@v2
         with:
