@@ -30,10 +30,10 @@ jobs:
           git config --global core.safecrlf false
       - name: Install AU
         run: |
-          git clone -q https://github.com/kai2nenobu/au.git $Env:TEMP/au
+          git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
           . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
         env:
-          au_version: pwsh7
+          au_version: master
       - name: Check update for packages
         run: |
           $ErrorActionPreference = 'Continue'
