@@ -79,6 +79,10 @@ Or add an above feed to your chocolatey source and install a package.
 > choco install <package_id>
 ```
 
+# 利用許諾 (License)
+
+このリポジトリに含まれるスクリプト、nuspecなどのすべてのファイルにUnlicenseを適用します。ただし個別のディレクトリ、ファイルに別途利用許諾が記載されているものについてはそちらを優先します。Unlicenseの利用許諾全文は[LICENSE](./LICENSE)を参照してください。
+
 # References
 
 - [CreatePackages](https://chocolatey.org/docs/create-packages)
