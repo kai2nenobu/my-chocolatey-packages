@@ -21,7 +21,7 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 | [cmigemo](cmigemo)                         | [C/Migemo](https://github.com/koron/cmigemo)                                    | [![cmigemo version][cmigemo_version]][cmigemo_package]                                              |           |              |
 | [ghq](ghq)                                 | [ghq](https://github.com/motemen/ghq)                                           | [![ghq version][ghq_version]][ghq_package]                                                          | ✓         | ✓            |
 | [gibo](gibo)                               | [fast access to .gitignore boilerplates](https://github.com/simonwhitaker/gibo) | [![gibo version][gibo_version]][gibo_package]                                                       | ✓         | ✓            |
-| [mape](mape)                               | [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)      | [![mape version][mape_version]][mape_package]                                                       |           | ✓            |
+| mape                               | [Deprecated] [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)      | Migrated to [Chocolatey.org][mape_package]                                                       |           |             |
 | [mozc-emacs-helper](mozc-emacs-helper)     | [Mozc Emacs Helper](https://github.com/google/mozc/tree/master/src/unix/emacs)  | [![mozc-emacs-helper version][mozc-emacs-helper_version]][mozc-emacs-helper_package]                | ✓         |              |
 | [nkf](nkf)                                 | [nkf Network Kanji Filter](https://ja.osdn.net/projects/nkf/)                   | [![nkf version][nkf_version]][nkf_package]                                                          | ✓         |              |
 | pet                                        | [Deprecated] [pet : CLI Snippet Manager](https://github.com/knqyf263/pet)       | Migrated to [Chocolatey.org][pet_package]                                                           |           |              |
@@ -41,8 +41,7 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [ghq_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/ghq
 [gibo_version]: https://img.shields.io/myget/kai2nenobu/v/gibo.svg?label=gibo
 [gibo_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/gibo
-[mape_version]: https://img.shields.io/myget/kai2nenobu/v/mape.svg?label=myget
-[mape_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/mape
+[mape_package]: https://chocolatey.org/packages/mape
 [mozc-emacs-helper_version]: https://img.shields.io/myget/kai2nenobu/v/mozc-emacs-helper.svg?label=myget
 [mozc-emacs-helper_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/mozc-emacs-helper
 [nkf_version]: https://img.shields.io/myget/kai2nenobu/v/nkf.svg?label=myget
