@@ -1,24 +1,23 @@
 function Find-PleiadesVersion {
   <#
   .SYNOPSIS
-  Find the latest release version from pleiades home Page
+  Find the latest release version from pleiades download Page
   #>
-  $root = 'http://mergedoc.osdn.jp/'
-  $homeUrl = $root + 'pleiades.html'
-  $homePage = Invoke-WebRequest -Uri $homeUrl -UseBasicParsing
-  $latestLink = $homePage.Links | Where-Object { $_.href -like 'pleiades_distros*.html' } | Select-Object -First 1 -Expand href
-  ## Latest pleiades distribution page
-  $latestUrl = $root + $latestLink
+  $downloadUrl = 'https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/'
+  $downloadPage = Invoke-WebRequest -Uri $downloadUrl -UseBasicParsing
+  ## Find the directory for latest year
+  $latestYear = $downloadPage.Links | Where-Object { $_.href -like '20*/' } | Select-Object -Last 1 -Expand href
+  $latestUrl = $downloadUrl + $latestYear
   $latestPage = Invoke-WebRequest -Uri $latestUrl -UseBasicParsing
-  ## Find a latest version
-  $versionPattern = [regex]'^\s*(20\d\d-\d\d\.20\d{6})'
-  $latestVersion = $LatestPage.Content -split '\r?\n' | Select-String -Pattern $versionPattern | Select-Object -First 1
-  $latestVersion = $versionPattern.Match($latestVersion).Groups[1] # trim
-  $semverVersion = $latestVersion -replace '-','.'
-  $versionArray = $semverVersion -split '\.'
-  if ($versionArray.Count -ne 3) {
-    throw 'Version Number is invalid: {0}' -f $semverVersion
-  }
+  ## Find the latest version
+  $versionPattern = [regex]'pleiades-(20\d{2})-(\d{2})-platform-win-64bit_(20\d{6}).zip'
+  $latestLink = $latestPage.Links `
+    | Where-Object { $_.href -match $versionPattern } `
+    | Select-Object -Last 1 -Expand href
+  $match = $versionPattern.Match($latestLink)
+  $latestVersion = $match.Groups[3]
+  $semverVersion = "$($match.Groups[1]).$($match.Groups[2]).$($match.Groups[3])"
+  $versionArray = @($match.Groups[1], $match.Groups[2], $match.Groups[3])
   return @{
     original = $latestVersion
     semver = $semverVersion
