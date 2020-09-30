@@ -44,7 +44,7 @@ function Get-PleiadesZipUrl {
   } else {
     $formatParams += ''
   }
-  return 'http://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-{3}-win-64bit{4}_{2}.zip' -f $formatParams
+  return 'https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-{3}-win-64bit{4}_{2}.zip' -f $formatParams
 }
 
 function Get-PleiadesTitle {
