@@ -7,7 +7,7 @@ function global:au_GetLatest {
   foreach ($release in $releases_info) {
     if (-not $release.prerelease) {
       $version = $release.tag_name -replace "^v",""
-      $url64 = $release.assets | Where-Object { $_.name -eq "wsl-gpg-agent.zip" } | Select-Object -First 1 -Expand browser_download_url
+      $url64 = $release.assets | Where-Object { $_.name -eq "wsl-ssh-agent.zip" } | Select-Object -First 1 -Expand browser_download_url
       return @{
         Version = $version
         URL64 = $url64
