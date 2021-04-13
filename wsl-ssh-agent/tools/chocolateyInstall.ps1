@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   PackageName    = 'wsl-ssh-agent'
-  FileFullPath64 = "$toolsPath\wsl-gpg-agent.zip"
+  FileFullPath64 = "$toolsPath\wsl-ssh-agent.zip"
   Destination    = $toolsPath
 }
 

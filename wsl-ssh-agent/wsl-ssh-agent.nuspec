@@ -3,7 +3,7 @@
   <metadata>
     <id>wsl-ssh-agent</id>
     <title>wsl-ssh-agent</title>
-    <version>1.5.1</version>
+    <version>1.5.2-pre</version>
     <authors>rupor-github</authors>
     <owners>kai2nenobu</owners>
     <summary>Helper to interface with Windows ssh-agent.exe service from Windows Subsystem for Linux (WSL)</summary>
