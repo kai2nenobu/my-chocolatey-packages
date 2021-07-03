@@ -1,11 +1,11 @@
-$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = $env:ChocolateyPackageName
 $unzipLocation = Join-Path $env:ChocolateyPackageFolder 'a5m2'
-$url         = 'http://a5m2.mmatsubara.com/download/a5m2_2.12.2_x86.zip'
-$checksum    = '5b57d689b09c862e45c0a5ccd566074e'
-$url64       = 'http://a5m2.mmatsubara.com/download/a5m2_2.12.2_x64.zip'
-$checksum64  = '75522e39cad228d873232959efd461ff'
+$url = 'https://a5m2.mmatsubara.com/download/a5m2_2.15.5_x86.zip'
+$checksum = '5b03f399c435de97185d2832b7c79415a7033acf906575bc61cc7fc7866ba8ce'
+$url64 = 'https://a5m2.mmatsubara.com/download/a5m2_2.15.5_x64.zip'
+$checksum64 = '3a288f53fcdf7dd9beafd76c6d73d69b0a4a2ff799e87b07f32cdd804d744c08'
 
 # if ($env:ChocolateyForceX86 -Or !$env:OS_IS64BIT) {
 #   $subDirectory = 'cmigemo-default-win32'
@@ -20,6 +20,7 @@ Install-ChocolateyZipPackage `
   -Checksum $checksum `
   -Url64bit $url64 `
   -Checksum64 $checksum64 `
+  -ChecksumType 'sha256' `
   -UnzipLocation $unzipLocation
 
 # Prevent from generating shim for a5m2.exe

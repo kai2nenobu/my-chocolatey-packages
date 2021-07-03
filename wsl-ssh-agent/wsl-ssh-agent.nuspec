@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>wsl-ssh-agent</id>
+    <title>wsl-ssh-agent</title>
+    <version>1.5.2</version>
+    <authors>rupor-github</authors>
+    <owners>kai2nenobu</owners>
+    <summary>Helper to interface with Windows ssh-agent.exe service from Windows Subsystem for Linux (WSL)</summary>
+    <description>Helper to interface with Windows ssh-agent.exe service from WSL, replacement for ssh-agent-wsl.</description>
+    <projectUrl>https://github.com/rupor-github/wsl-ssh-agent</projectUrl>
+    <tags>ssh wsl</tags>
+    <copyright>rupor-github</copyright>
+    <licenseUrl>https://github.com/rupor-github/wsl-ssh-agent/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- <iconUrl></iconUrl> -->
+    <releaseNotes></releaseNotes>
+    <docsUrl>https://github.com/rupor-github/wsl-ssh-agent/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/rupor-github/wsl-ssh-agent/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/rupor-github/wsl-ssh-agent</projectSourceUrl>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/wsl-ssh-agent</packageSourceUrl>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
