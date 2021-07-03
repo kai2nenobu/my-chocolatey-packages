@@ -10,6 +10,10 @@ function Find-PleiadesVersion {
   $latestVersionString = $downloadPage.Content -split "`n" `
   | Where-Object { $_ -match $versionPattern } `
   | Select-Object -First 1
+  if ($latestVersionString -eq '2021-09.20210629') {
+    # Fix a typo in upstream
+    $latestVersionString = '2021-06.20210629'
+  }
   $match = $versionPattern.Match($latestVersionString)
   $latestVersion = $match.Groups[3]
   $semverVersion = "$($match.Groups[1]).$($match.Groups[2]).$($match.Groups[3])"
