@@ -3,7 +3,7 @@
   <metadata>
     <id>exa</id>
     <title>exa</title>
-    <version>0.10.1-pre</version>
+    <version>0.10.1</version>
     <authors>Benjamin Sago</authors>
     <copyright>Benjamin Sago</copyright>
     <summary>A modern replacement for ls.</summary>
