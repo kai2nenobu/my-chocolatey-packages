@@ -19,6 +19,7 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 | [a5m2](a5m2)                               | [A5:SQL Mk-2](http://a5m2.mmatsubara.com/)                                      | [![a5m2 version][a5m2_version]][a5m2_package]                                                       |           | ✓            |
 | [aws-sam-cli](aws-sam-cli)                 | [AWS SAM CLI](https://aws.amazon.com/serverless/sam/)                           | [![aws-sam-cli version][aws-sam-cli_version]][aws-sam-cli_package]                                  |           | ✓            |
 | [cmigemo](cmigemo)                         | [C/Migemo](https://github.com/koron/cmigemo)                                    | [![cmigemo version][cmigemo_version]][cmigemo_package]                                              |           |              |
+| [exa](exa)                                 | [exa](https://the.exa.website/)                                                 | [![exa version][exa_version]][exa_package]                                                          | ✓        |              |
 | [ghq](ghq)                                 | [ghq](https://github.com/motemen/ghq)                                           | [![ghq version][ghq_version]][ghq_package]                                                          | ✓         | ✓            |
 | [gibo](gibo)                               | [fast access to .gitignore boilerplates](https://github.com/simonwhitaker/gibo) | [![gibo version][gibo_version]][gibo_package]                                                       | ✓         | ✓            |
 | mape                               | [Deprecated] [May Authentication Proxies Explode](https://github.com/ipponshimeji/MAPE)      | Migrated to [Chocolatey.org][mape_package]                                                       |           |             |
@@ -37,6 +38,8 @@ Some packages are automatically updated by using [AU](https://github.com/majkine
 [aws-sam-cli_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/aws-sam-cli
 [cmigemo_version]: https://img.shields.io/myget/kai2nenobu/v/cmigemo.svg?label=myget
 [cmigemo_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/cmigemo
+[exa_version]: https://img.shields.io/myget/kai2nenobu/v/exa.svg?label=myget
+[exa_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/exa
 [ghq_version]: https://img.shields.io/myget/kai2nenobu/v/ghq.svg?label=myget
 [ghq_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/ghq
 [gibo_version]: https://img.shields.io/myget/kai2nenobu/v/gibo.svg?label=gibo
