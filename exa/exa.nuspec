@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>exa</id>
+    <title>exa</title>
+    <version>0.10.1-pre</version>
+    <authors>Benjamin Sago</authors>
+    <copyright>Benjamin Sago</copyright>
+    <summary>A modern replacement for ls.</summary>
+    <description><![CDATA[
+[exa_version]: https://img.shields.io/myget/kai2nenobu/v/exa.svg?label=exa
+[exa_package]: https://www.myget.org/feed/kai2nenobu/package/nuget/exa
+[exa_screenshots]: https://cdn.jsdelivr.net/gh/ogham/exa@master/screenshots.png
+
+# exa
+
+[exa](https://the.exa.website/) is a modern replacement for _ls_.
+
+![Screenshots of exa][exa_screenshots]
+
+---
+
+**exa** is a modern replacement for the venerable file-listing command-line program `ls` that ships with Unix and Linux operating systems, giving it more features and better defaults.
+It uses colours to distinguish file types and metadata.
+It knows about symlinks, extended attributes, and Git.
+And it’s **small**, **fast**, and just **one single binary**.
+
+By deliberately making some decisions differently, exa attempts to be a more featureful, more user-friendly version of `ls`.
+For more information, see [exa’s website](https://the.exa.website/).
+]]></description>
+    <tags>cli</tags>
+    <projectUrl>https://the.exa.website/</projectUrl>
+    <projectSourceUrl>https://github.com/ogham/exa</projectSourceUrl>
+    <licenseUrl>https://github.com/ogham/exa/blob/master/LICENCE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://the.exa.website/introduction</docsUrl>
+    <releaseNotes>https://github.com/ogham/exa/releases/tag/v0.10.1</releaseNotes>
+    <bugTrackerUrl>https://github.com/ogham/exa/issues</bugTrackerUrl>
+    <owners>kai2nenobu</owners>
+    <packageSourceUrl>https://github.com/kai2nenobu/my-chocolatey-packages/tree/master/exa</packageSourceUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
