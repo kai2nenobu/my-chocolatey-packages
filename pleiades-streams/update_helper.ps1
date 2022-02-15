@@ -3,10 +3,15 @@ function Find-PleiadesVersion {
   .SYNOPSIS
   Find the latest release version from pleiades download Page
   #>
-  $downloadUrl = 'https://mergedoc.osdn.jp/pleiades_distros2021.html'
+  $downloadBase = 'https://mergedoc.osdn.jp/'
+  ## Find the latest release year in a top page
+  $topPageUrl = $downloadBase + 'pleiades.html'
+  $topPage = Invoke-WebRequest -Uri $topPageUrl -UseBasicParsing
+  $latestLink = $topPage.Links | Where-Object { $_.href -like 'pleiades_distros20*.html' } | Select-Object -First 1 -Expand href
+  ## Find the latest version like "20YY-MM.20YYMMDD"
+  $downloadUrl = $downloadBase + $latestLink
   $downloadPage = Invoke-WebRequest -Uri $downloadUrl -UseBasicParsing
   $versionPattern = [regex]'^\s*(20\d{2})-(\d{2})\.(20\d{6})'
-  # Extract the latest version string
   $latestVersionString = $downloadPage.Content -split "`n" `
   | Where-Object { $_ -match $versionPattern } `
   | Select-Object -First 1
