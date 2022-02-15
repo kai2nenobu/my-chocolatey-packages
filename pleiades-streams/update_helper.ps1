@@ -15,9 +15,9 @@ function Find-PleiadesVersion {
     $latestVersionString = '2021-06.20210629'
   }
   $match = $versionPattern.Match($latestVersionString)
-  $latestVersion = $match.Groups[3]
+  $latestVersion = $match.Groups[3].Value
   $semverVersion = "$($match.Groups[1]).$($match.Groups[2]).$($match.Groups[3])"
-  $versionArray = @($match.Groups[1], $match.Groups[2], $match.Groups[3])
+  $versionArray = @($match.Groups[1].Value, $match.Groups[2].Value, $match.Groups[3].Value)
   return @{
     original = $latestVersion
     semver   = $semverVersion
