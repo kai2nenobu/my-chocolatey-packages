@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'pleiades-platform'
 $installPath = Join-Path (Get-ToolsLocation) $packageName
@@ -12,12 +12,12 @@ Install-ChocolateyZipPackage `
   -PackageName $packageName `
   -Url $url `
   -Checksum $checksum `
-  -ChecksumType $checkstumType `
+  -ChecksumType $checksumType `
   -UnzipLocation $installPath
 
 ## Create a shortcut to eclipse.exe
-$CommonPrograms =([Environment]::GetFolderPath('CommonPrograms'))
-$executable = Join-Path $installPath 'pleiades/eclipse/eclipse.exe'
+$CommonPrograms = ([Environment]::GetFolderPath('CommonPrograms'))
+$executable = Join-Path $installPath 'eclipse/eclipse.exe'
 $workdir = Split-Path $executable -Parent
 $shortcut = Join-Path $CommonPrograms "$packageName/$shortcutName"
 Install-ChocolateyShortcut `

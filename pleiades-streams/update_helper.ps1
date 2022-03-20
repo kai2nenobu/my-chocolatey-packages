@@ -30,10 +30,10 @@ function Find-PleiadesVersion {
   }
 }
 
-function Get-PleiadesZipUrl {
+function Get-PleiadesArchiveUrl {
   <#
   .SYNOPSIS
-  Format a download URL for pleiades zip
+  Format a download URL for pleiades archive
   #>
   [CmdletBinding()]
   param(
@@ -50,7 +50,7 @@ function Get-PleiadesZipUrl {
   else {
     $formatParams += ''
   }
-  return 'https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-{3}-win-64bit{4}_{2}.zip' -f $formatParams
+  return 'https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/{0}/pleiades-{0}-{1}-{3}-win-64bit{4}_{2}.exe' -f $formatParams
 }
 
 function Get-PleiadesTitle {
@@ -89,7 +89,7 @@ function Get-PleiadesStream {
   $full = $StreamName -match '-full$'
   return @{
     PackageName = "pleiades-$StreamName"
-    URL64       = (Get-PleiadesZipUrl -Name $name -VersionArray $VersionArray -FullEdition $full)
+    URL64       = (Get-PleiadesArchiveUrl -Name $name -VersionArray $VersionArray -FullEdition $full)
     Title       = (Get-PleiadesTitle -Name $name -FullEdition $full)
   }
 }
