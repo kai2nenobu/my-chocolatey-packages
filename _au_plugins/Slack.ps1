@@ -34,7 +34,8 @@ param(
   $Info,
   [string]$WebHookUrl,
   [string]$BuildUrl = '',
-  [string]$MessageFormat = "[Update Status:{0} packages. {1} Updated, {2} Published, {3} Failed]`n{4}"
+  [string]$MessageFormat = "[Update Status:{0} packages. {1} Updated, {2} Published, {3} Failed]`n{4}",
+  [bool]$OnlyWhenChange = $false
 )
 
 if (!$WebHookUrl) {
@@ -55,7 +56,13 @@ $message     = ($MessageFormat -f $packageCount, $updatedPackages, $publishedPac
 $color = if ($failedPackages -gt 0) { 'danger' }
          elseif ($publishedPackages -gt 0) { 'good' }
          elseif ($ignoredPackages -gt 0) { 'warning' }
-         else { '#00b4ff' }
+         else { 
+           if ($OnlyWhenChange) {
+            Write-Host "Don't publish a message because no packages are changed."
+            return
+           }
+           '#00b4ff'
+         }
 
 $body = @{
   text = ''
