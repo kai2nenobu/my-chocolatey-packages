@@ -44,34 +44,34 @@ if (!$WebHookUrl) {
   return
 }
 
-$updatedPackages   = @($Info.result.updated).Count
+$updatedPackages = @($Info.result.updated).Count
 $publishedPackages = @($Info.result.pushed).Count
 $ignoredPackages = @($Info.result.ignored).Count
-$failedPackages    = $Info.error_count.total
-$gistUrl           = $Info.plugin_results.Gist -split '\n' | select -Last 1
-$packageCount      = $Info.result.all.Length
+$failedPackages = $Info.error_count.total
+$gistUrl = $Info.plugin_results.Gist -split '\n' | select -Last 1
+$packageCount = $Info.result.all.Length
 
 $messageHeader = if ($BuildUrl) { "<$BuildUrl|Update AU Packages>" } else { 'Update AU Packages' }
-$message     = ($MessageFormat -f $packageCount, $updatedPackages, $publishedPackages, $failedPackages, $gistUrl)
+$message = ($MessageFormat -f $packageCount, $updatedPackages, $publishedPackages, $failedPackages, $gistUrl)
 $color = if ($failedPackages -gt 0) { 'danger' }
-         elseif ($publishedPackages -gt 0) { 'good' }
-         elseif ($ignoredPackages -gt 0) { 'warning' }
-         else { 
-           if ($OnlyWhenChange) {
-            Write-Host "Don't publish a message because no packages are changed."
-            return
-           }
-           '#00b4ff'
-         }
+elseif ($publishedPackages -gt 0) { 'good' }
+elseif ($ignoredPackages -gt 0) { 'warning' }
+else { 
+  if ($OnlyWhenChange) {
+    Write-Host "Don't publish a message because no packages are changed."
+    return
+  }
+  '#00b4ff'
+}
 
 $body = @{
-  text = ''
+  text        = ''
   attachments = @(
     @{
-      color = $color
+      color  = $color
       fields = @(
         @{
-          value = "{0}`n{1}" -f $messageHeader,$message
+          value = "{0}`n{1}" -f $messageHeader, $message
           short = $False
         }
       )
@@ -80,10 +80,10 @@ $body = @{
 } | ConvertTo-Json -Compress -Depth 10
 
 $arguments = @{
-  Uri = $WebHookUrl
-  Method = 'Post'
+  Uri         = $WebHookUrl
+  Method      = 'Post'
   ContentType = 'application/json'
-  Body = [Text.Encoding]::UTF8.GetBytes($body)
+  Body        = [Text.Encoding]::UTF8.GetBytes($body)
 }
 
 "Submitting message to slack"
