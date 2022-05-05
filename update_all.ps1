@@ -73,6 +73,7 @@ $Options = [ordered]@{
 
     Slack = @{
       WebHookUrl = $Env:slack_webhook_url
+      MessageTitle = 'Update My AU Packages'
       BuildUrl = $Env:GH_ACTIONS_BUILD_URL
       OnlyWhenChange = $true
     }
