@@ -74,6 +74,7 @@ $Options = [ordered]@{
     Slack = @{
       WebHookUrl = $Env:slack_webhook_url
       BuildUrl = $Env:GH_ACTIONS_BUILD_URL
+      OnlyWhenChange = $true
     }
 
     RunInfo = @{
