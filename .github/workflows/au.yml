@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 100
+          submodules: recursive
       - name: Check a build environment
         run: |
           Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version
