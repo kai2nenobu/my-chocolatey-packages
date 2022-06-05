@@ -2,10 +2,10 @@
 
 $packageName = $env:ChocolateyPackageName
 $unzipLocation = Join-Path $env:ChocolateyPackageFolder 'a5m2'
-$url = 'https://a5m2.mmatsubara.com/download/a5m2_2.17.0_x86.zip'
-$checksum = '1a322124fea1b1d29842048d2c640d15f63034ef275188699d48630f9b53b7ff'
-$url64 = 'https://a5m2.mmatsubara.com/download/a5m2_2.17.0_x64.zip'
-$checksum64 = '91f3563c6de778c80188fa2ef3c3ad9c5a836e1360d6dfb417ff08a4bb69febe'
+$url = 'https://a5m2.mmatsubara.com/download/a5m2_2.17.2_x86.zip'
+$checksum = 'fa725e58e47836e141d4fd2dfbcd2c2c30b0d63544553c531835b7ff0f838210'
+$url64 = 'https://a5m2.mmatsubara.com/download/a5m2_2.17.2_x64.zip'
+$checksum64 = '816e978605ba90c96294d7e5e8ddf1803c646a9201c5c9e153189b2b8bcfc364'
 
 # if ($env:ChocolateyForceX86 -Or !$env:OS_IS64BIT) {
 #   $subDirectory = 'cmigemo-default-win32'
