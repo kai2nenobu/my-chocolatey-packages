@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://github.com/rupor-github/wsl-ssh-agent/releases/download/v1.6.2/wsl-ssh-agent.zip
+   x64: https://github.com/rupor-github/wsl-ssh-agent/releases/download/v1.6.3/wsl-ssh-agent.zip
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 2162D89B46BD01D9DC9827D5F3CE7F5C042A16D3C50440C12BC63BCB2789D823
+   checksum64: 035CA462D7A83598BA4000A46074B16B5858E7919FAA00A52056455F61AE2CC5
 
 Using AU:
 
