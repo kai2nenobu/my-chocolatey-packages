@@ -2,8 +2,7 @@ import-module au
 
 function global:au_GetLatest {
   ## Find a latest release and extract installer URL from GitHub tags
-  $tags_url = 'https://api.github.com/repos/simonwhitaker/gibo/tags'
-  $tag_list = Invoke-RestMethod -Uri $tags_url
+  $tag_list = gh api 'repos/simonwhitaker/gibo/tags' | ConvertFrom-Json
   foreach ($tag in $tag_list) {
     $name = $tag.name
     # Skip non semver tags

@@ -1,10 +1,8 @@
 Import-Module au
 
-$releases = 'https://api.github.com/repos/awslabs/aws-sam-cli/releases'
-
 function global:au_GetLatest {
   ## Find a latest release and extract installer URL from GitHub Releases
-  $releases_info = Invoke-RestMethod -Uri $releases
+  $releases_info = gh api 'repos/awslabs/aws-sam-cli/releases' | ConvertFrom-Json
   foreach ($release in $releases_info) {
     if (-not $release.prerelease) {
       $version = $release.tag_name -replace "^v",""
