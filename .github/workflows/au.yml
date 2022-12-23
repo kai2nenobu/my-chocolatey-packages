@@ -44,6 +44,7 @@ jobs:
           ./update_all.ps1 -ForcedPackages '${{ github.event.inputs.forced_packages }}'
           7z a au_temp.zip $Env:TEMP\chocolatey\au\*
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # To authenticate GitHub CLI
           au_push: true
           au_pushurl: https://www.myget.org/F/kai2nenobu # Where to push packages
           # Github token to commit pushed packages to repository
