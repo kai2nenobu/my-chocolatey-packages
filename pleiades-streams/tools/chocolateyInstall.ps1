@@ -2,8 +2,8 @@
 
 $packageName = 'pleiades-platform'
 $installPath = Join-Path (Get-ToolsLocation) $packageName
-$url = 'https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2022/pleiades-2022-12-platform-win-64bit_20221215.exe'
-$checksum = '08d2a15b06555b2a2c4d57025edd2738'
+$url = 'https://ftp.jaist.ac.jp/pub/mergedoc/pleiades/2022/pleiades-2022-12-platform-win-64bit_20230124.exe'
+$checksum = '169654e5bd54efab4fc7c9e5b6b4507d'
 $checksumType = 'md5'
 $shortcutName = 'Pleiades All in One Platform Standard Edition.lnk'
 
