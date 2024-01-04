@@ -7,9 +7,9 @@ $packageArgs = @{
   PackageName = $packageName
   FileType = 'msi'
   SilentArgs = '/quiet'
-  Url64bit = 'https://github.com/aws/aws-sam-cli/releases/download/v1.105.0/AWS_SAM_CLI_64_PY3.msi'
+  Url64bit = 'https://github.com/aws/aws-sam-cli/releases/download/v1.106.0/AWS_SAM_CLI_64_PY3.msi'
   ChecksumType = 'sha256'
-  Checksum64 = '821551df6cd9294dcd377797905bd9d89d316933ca12a42bf84ce433788658ee'
+  Checksum64 = '2b96e4512e70dc4e896de074c6bd7519c3673f74643e5ede9ee5091d4418e9f9'
 }
 
 
