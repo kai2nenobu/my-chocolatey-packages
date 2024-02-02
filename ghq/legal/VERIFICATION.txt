@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://github.com/x-motemen/ghq/releases/download/v1.4.2/ghq_windows_amd64.zip
+   x64: https://github.com/x-motemen/ghq/releases/download/v1.5.0/ghq_windows_amd64.zip
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 2B73042AFD2211D2D6BFA4BBDA1CCEB30527D960545ABAFF288C97E6628D5303
+   checksum64: CB9BCCE766C8E905FEC05C7D6676C52FF4C61A6338CE1F47FD267A9EB414B878
 
 Using AU:
 
