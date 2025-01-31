@@ -1,4 +1,4 @@
-Import-Module au
+#Requires -Modules Chocolatey-AU
 
 # Load a helper script
 $helper = Join-Path $PSScriptRoot 'update_helper.ps1'

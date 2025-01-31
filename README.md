@@ -10,7 +10,7 @@
 This repository stores chocolatey packages for my own.
 
 These packages are built on [GitHub Actions](https://github.com/kai2nenobu/my-chocolatey-packages/actions) and stored in [MyGet public feed](https://www.myget.org/F/kai2nenobu).
-Some packages are automatically updated by using [AU](https://github.com/majkinetor/au). ([Update Report](https://gist.github.com/kai2nenobu/4df33f42a891ced2fe169974fd3d58ec))
+Some packages are automatically updated by using [chocolatey-au](https://github.com/chocolatey-community/chocolatey-au). ([Update Report](https://gist.github.com/kai2nenobu/4df33f42a891ced2fe169974fd3d58ec))
 
 # Package List
 

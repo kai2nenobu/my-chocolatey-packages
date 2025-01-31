@@ -1,4 +1,4 @@
-Import-Module au
+#Requires -Modules Chocolatey-AU
 
 function global:au_GetLatest {
   ## Find a latest version from a5m2 history page
