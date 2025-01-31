@@ -12,6 +12,8 @@ on:
 jobs:
   auto_update:
     runs-on: windows-2022
+    permissions:
+      contents: write  # push commits to a repository
     defaults:
       run:
         shell: powershell
@@ -45,7 +47,7 @@ jobs:
           au_pushurl: https://www.myget.org/F/kai2nenobu # Where to push packages
           # Github token to commit pushed packages to repository
           github_user_repo: ${{ github.repository }}
-          github_api_key: ${{ secrets.AU_GITHUB_API_KEY }}
+          github_api_key: ${{ secrets.GITHUB_TOKEN }}
 
           # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
           # Optional, leave empty to create anonymous gist
