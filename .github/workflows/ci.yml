@@ -71,7 +71,7 @@ jobs:
             .\test.bat
           }
       - name: Save a package as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: ${{ env.PACKAGE_ID }}_package
           path: '**/*.nupkg'
